@@ -12,5 +12,16 @@
       "password": "1234",
       "id": 2
     }
+  ],
+
+  "recipes": [
+      {
+          "id": 1,
+          "name": "Burrito",
+          "type": "Mexican",
+          "ingredients": "Tortilla, Chorizo, Corn, Rice"
+
+      }
+
   ]
 }
