@@ -2,6 +2,7 @@ import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
+import WelcomePage from "./welcome/WelcomePage";
 
 
 export default class ApplicationViews extends Component {
@@ -14,6 +15,9 @@ export default class ApplicationViews extends Component {
       <React.Fragment>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/welcome" component={WelcomePage} />
+
+
 
 
       </React.Fragment>
