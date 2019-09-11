@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import UserDataManager from '../modules/AuthenticationManager';
 
+
 class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -57,7 +58,7 @@ class Register extends React.Component {
         }
         UserDataManager.postUser(newUserObject)
             .then(newRegisteredUser => sessionStorage.setItem("credentials", newRegisteredUser.id))
-            .then(() => this.props.history.push("/chat"))
+            .then(() => this.props.history.push("/home"))
         }
     }
 

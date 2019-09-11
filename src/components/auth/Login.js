@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import UserDataManager from "../modules/AuthenticationManager"
 
 class Login extends Component {
@@ -39,34 +40,38 @@ class Login extends Component {
     render() {
         console.log(this.state.users);
         return (
-          <React.Fragment>
-            <form onSubmit={this.handleLogin}>
-              <fieldset className="loginSection">
-                <h3>Please Log In</h3>
-                <div className="loginForm">
-                  <input
-                    onChange={this.handleFieldChange}
-                    type="email"
-                    id="email"
-                    placeholder="Email address"
-                    required
-                    autoFocus=""
-                  /><br/>
-                  <input
-                    onChange={this.handleFieldChange}
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
-                <button type="submit">Sign In</button>
-                <p>Or</p>
-              </fieldset>
-            </form>
-          </React.Fragment>
+            <React.Fragment>
+                <form onSubmit={this.handleLogin}>
+                    <fieldset className="loginSection">
+                        <h3>Please Log In</h3>
+                        <div className="loginForm">
+                            <input
+                                onChange={this.handleFieldChange}
+                                type="email"
+                                id="email"
+                                placeholder="Email address"
+                                required
+                                autoFocus=""
+                            /><br />
+                            <input
+                                onChange={this.handleFieldChange}
+                                type="password"
+                                id="password"
+                                placeholder="Password"
+                                required
+                            />
+                        </div>
+                        <button type="submit">Sign In</button>
+                        <p>Or</p>
+                        
+                        <Link to={`/register`}>
+                            <button>Sign Up!</button>
+                        </Link>
+                    </fieldset>
+                </form>
+            </React.Fragment>
         );
-      }
+    }
 
 
 }
