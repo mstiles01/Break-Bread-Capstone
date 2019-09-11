@@ -35,7 +35,7 @@ class RecipeList extends Component {
           <AddRecipeModal addNewNews={this.addNewRecipe} {...this.props} />
         </section>
         <div className="cards__container">
-          {this.state.news.map(recipes => (
+          {this.state.recipes.map(recipes => (
             <RecipeCard
               key={recipes.id}
               recipes={recipes}

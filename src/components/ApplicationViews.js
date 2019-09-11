@@ -7,8 +7,8 @@ import RecipeList from "./recipe/RecipeList"
 
 
 export default class ApplicationViews extends Component {
-  isAuthenticated = () => sessionStorage.getItem("activeUser") !== null;
-  activeUser = () => parseInt(sessionStorage.getItem("activeUser"));
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+  activeUser = () => parseInt(sessionStorage.getItem("credentials"));
 
   render() {
     console.log(this.activeUser());
