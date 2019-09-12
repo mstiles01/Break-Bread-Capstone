@@ -72,22 +72,22 @@ class recipeAddModal extends React.Component {
           <ModalBody>
             {/* put form info */}
             <Input
-              id="recipeName"
+              id="name"
               type="text"
               onChange={this.handleFieldChange}
               placeholder="Add Name"
             />
             <Input
-            id="recipeType"
+            id="type"
             type="text"
             onChange={this.handleFieldChange}
             placeholder="Add Type"
           />
            <Input
-              id="recipeIngredients"
+              id="ingredients"
               type="text"
               onChange={this.handleFieldChange}
-              value={this.state.newsURL}
+              value={this.state.ingredients}
               placeholder="Add Ingredients"
 
             />
