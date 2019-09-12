@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import EditRecipeModal from "./EditRecipeModal"
 
 class RecipeCard extends Component {
     render() {
@@ -10,6 +11,7 @@ class RecipeCard extends Component {
                 <p>Type: {this.props.recipes.type}</p>
                 <button type="button" onClick={() => this.props.deleteRecipe(this.props.recipes.id)}>Scrap This!</button>
                 <Link to={`/recipes/${this.props.recipes.id}`}><button>Recipe Details</button></Link>
+                <EditRecipeModal {...this.props} />{" "}
             </div>
             </div>
         );
