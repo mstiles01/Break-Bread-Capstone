@@ -17,30 +17,40 @@ class RecipeList extends Component {
     })
    }
 
-   deleteRecipe = id => {
-    RecipeManager.delete(id)
-    .then(() => {
-        RecipeManager.getAll()
-        .then((newRecipes) => {
+   addNewRecipe = obj => {
+    return RecipeManager.post(obj).then(() => {
+      RecipeManager.getAll(this.props.activeUser()).then(recipes => {
             this.setState({
-              recipes: newRecipes
-            })
-        })
-    })
+              recipes: recipes
+            });
+        });
+    });
+}
+
+   deleteRecipe = id => {
+    return RecipeManager.delete(id)
+    .then(() => {
+        RecipeManager.getAll(this.props.activeUser())
+        .then((recipes) => {
+            this.setState({
+              recipes: recipes
+            });
+        });
+    });
    }
    render() {
     return (
       <React.Fragment>
         <section className="button__container">
-          <AddRecipeModal addNewNews={this.addNewRecipe} {...this.props} />
+          <AddRecipeModal addNewRecipe={this.addNewRecipe} {...this.props} />
         </section>
         <div className="cards__container">
           {this.state.recipes.map(recipes => (
             <RecipeCard
               key={recipes.id}
               recipes={recipes}
-              editRecipes={this.editRecipes}
-              deleteRecipes={this.deleteRecipes}
+              editRecipe={this.editRecipe}
+              deleteRecipe={this.deleteRecipe}
               {...this.props}
             />
           ))}

@@ -7,21 +7,18 @@
       "id": 1
     },
     {
-    "email": "mstiles01@icloud.com",
+      "email": "mstiles01@icloud.com",
       "username": "andyismydad",
       "password": "1234",
       "id": 2
     }
   ],
-
   "recipes": [
-      {
-          "id": 1,
-          "name": "Burrito",
-          "type": "Mexican",
-          "ingredients": "Tortilla, Chorizo, Corn, Rice"
-
-      }
-
+    {
+      "id": 1,
+      "name": "Burrito",
+      "type": "Mexican",
+      "ingredients": "Tortilla, Chorizo, Corn, Rice"
+    }
   ]
 }
