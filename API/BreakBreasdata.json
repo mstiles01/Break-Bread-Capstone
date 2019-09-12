@@ -15,10 +15,32 @@
   ],
   "recipes": [
     {
-      "id": 1,
-      "name": "Burrito",
-      "type": "Mexican",
-      "ingredients": "Tortilla, Chorizo, Corn, Rice"
+      "name": "asdfsfdg",
+      "type": "asdfgfd",
+      "ingredients": "adsfdf",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "name": "asd.fja",
+      "type": "daslfj",
+      "ingredients": "asd.kfj",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "adsf.k ",
+      "type": "dsa.fk ",
+      "ingredients": "asl;dfn",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "/ljn;jo",
+      "type": "jn;jb",
+      "ingredients": "jb ;jb ",
+      "userId": 2,
+      "id": 7
     }
   ]
 }

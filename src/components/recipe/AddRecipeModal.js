@@ -87,7 +87,6 @@ class recipeAddModal extends React.Component {
               id="ingredients"
               type="text"
               onChange={this.handleFieldChange}
-              value={this.state.ingredients}
               placeholder="Add Ingredients"
 
             />
