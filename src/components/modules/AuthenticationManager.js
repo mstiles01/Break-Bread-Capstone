@@ -18,5 +18,10 @@ export default {
             },
             body: JSON.stringify(userObject)
         }).then(data => data.json())
-    }
+    },
+
+    getUser(id) {
+        return fetch(`${remoteURL}/users/${id}`)
+            .then(response => response.json());
+    },
 }
