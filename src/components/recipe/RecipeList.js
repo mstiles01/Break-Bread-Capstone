@@ -30,7 +30,7 @@ class RecipeList extends Component {
    deleteRecipe = id => {
     return RecipeManager.delete(id)
     .then(() => {
-        RecipeManager.getAll(this.props.activeUser())
+        RecipeManager.getAll(()=>this.props.activeUser())
         .then((recipes) => {
             this.setState({
               recipes: recipes
@@ -38,6 +38,15 @@ class RecipeList extends Component {
         });
     });
    }
+   editRecipe = (obj, id) => {
+    return RecipeManager.editRecipe(obj, id).then(() => {
+      RecipeManager.getAll(this.props.activeUser()).then(recipes => {
+            this.setState({
+              recipes:recipes
+            });
+        });
+    })
+}
    render() {
     return (
       <React.Fragment>

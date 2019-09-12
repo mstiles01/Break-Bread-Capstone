@@ -4,6 +4,7 @@ import Login from "./auth/Login";
 import Register from "./auth/Register";
 import WelcomePage from "./welcome/WelcomePage";
 import RecipeList from "./recipe/RecipeList"
+import RecipeDetail from "./recipe/RecipeDetail"
 
 
 export default class ApplicationViews extends Component {
@@ -23,11 +24,16 @@ export default class ApplicationViews extends Component {
           render={props => {
             if (this.isAuthenticated()) {
               return <RecipeList activeUser={this.activeUser} {...props} />;
-
               // Remove null and return the component which will show news articles
             }
           }}
         />
+
+        <Route path="/recipes/:recipeId(\d+)" render={(props) => {
+          // Pass the animalId to the AnimalDetailComponent
+          return <RecipeDetail recipeId={parseInt(props.match.params.recipeId)} {...props} />
+        }} />
+
 
 
 
