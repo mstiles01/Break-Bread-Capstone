@@ -24,4 +24,13 @@ export default {
         return fetch(`${remoteURL}/users/${id}`)
             .then(response => response.json());
     },
+    editBio(editedUseroObj, editedUserId) {
+        return fetch(`${remoteURL}/users/${editedUserId}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(editedUseroObj)
+        }).then(data => data.json());
+      }
 }
