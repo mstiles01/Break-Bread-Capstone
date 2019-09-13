@@ -4,12 +4,14 @@
       "email": "elidumbface@dumbdumb.com",
       "username": "elidumbface",
       "password": "1234",
+      "bio":"I am Michael, Hear Me Roar!",
       "id": 1
     },
     {
       "email": "mstiles01@icloud.com",
       "username": "andyismydad",
       "password": "1234",
+      "bio":"I am Michael, Hear Me Roar!",
       "id": 2
     }
   ],
