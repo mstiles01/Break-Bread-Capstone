@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import AuthenticationManager from "../modules/AuthenticationManager";
 
+
 class EditBioModal extends React.Component {
     constructor(props) {
       super(props);

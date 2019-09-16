@@ -10,7 +10,7 @@ class RecipeDetail extends Component {
     }
 
     componentDidMount(){
-        RecipeManager.get(this.props.recipeId)
+        RecipeManager.getRecipes(this.props.recipeId)
         .then((recipe) => {
             this.setState({
                 name: recipe.name,
@@ -23,7 +23,7 @@ class RecipeDetail extends Component {
 
     handleDelete = () => {
         this.setState({loadingStatus: true})
-        RecipeManager.delete(this.props.recipeID)
+        RecipeManager.deleteRecipe(this.props.recipeID)
         .then(() => this.props.history.push("/recipes"))
     }
 

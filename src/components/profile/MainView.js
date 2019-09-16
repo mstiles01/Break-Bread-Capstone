@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthenticationManager from '.././modules/AuthenticationManager';
 import EditBioModal from './EditBioModal';
+import ProfileManager from '../modules/ProfileManager'
 
 
 class MainView extends Component {
@@ -30,7 +31,7 @@ class MainView extends Component {
     }
 
     editBio = (obj, id) => {
-        return AuthenticationManager.editBio(obj, id).then(() => {
+        return ProfileManager.editBio(obj, id).then(() => {
             AuthenticationManager.getAll(this.props.activeUser()).then(bio => {
                 this.setState({
                     bio: bio
