@@ -4,21 +4,21 @@
       "email": "elidumbface@dumbdumb.com",
       "username": "elidumbface",
       "password": "1234",
-      "bio":"I am Michael, Hear Me Roar!",
+      "bio": "I am Michael, Hear Me Roar!",
       "id": 1
     },
     {
-      "email": "mstiles01@icloud.com",
+      "bio": "Oh my effing gosh! ",
       "username": "andyismydad",
+      "email": "mstiles01@icloud.com",
       "password": "1234",
-      "bio":"I am Michael, Hear Me Roar!",
       "id": 2
     }
   ],
   "recipes": [
     {
       "name": "Bingo",
-      "type": "asdfgfd",
+      "type": "dcdc",
       "ingredients": "adsfdf",
       "userId": 2,
       "id": 4
@@ -29,13 +29,6 @@
       "ingredients": "asd.kfj",
       "userId": 2,
       "id": 5
-    },
-    {
-      "name": "adsf.k ",
-      "type": "dsa.fk ",
-      "ingredients": "asl;dfn",
-      "userId": 2,
-      "id": 6
     },
     {
       "name": "/ljn;jo",

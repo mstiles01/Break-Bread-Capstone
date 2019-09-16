@@ -43,7 +43,7 @@ class EditRecipeModal extends React.Component {
   // function that takes the id of an event (from an API method) and changes the state of the event
   componentDidMount() {
     // getEvent fetch. fetches a single event to be edited
-    RecipeManager.get(this.props.recipes.id).then(recipes => {
+    RecipeManager.getRecipes(this.props.recipes.id).then(recipes => {
       this.setState({
         // changing state of the event object from the getEvent
         name: recipes.name,

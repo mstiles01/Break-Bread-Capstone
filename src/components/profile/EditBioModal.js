@@ -20,6 +20,9 @@ class EditBioModal extends React.Component {
         // put properties here
         userId: "",
         bio: "",
+        email: "",
+        password: "",
+        username: "",
         loadingStatus: false
       };
       // toggle from reactstrap
@@ -43,10 +46,15 @@ class EditBioModal extends React.Component {
   componentDidMount() {
     // getEvent fetch. fetches a single event to be edited
     AuthenticationManager.getUser(this.props.activeUser()).then(user => {
+      // changing state of the event object from the getEvent
+      console.log(user)
       this.setState({
-        // changing state of the event object from the getEvent
+        userId : user.id,
+        username: user.username,
         bio: user.bio,
-        userId: user.userId
+        email: user.email,
+        password: user.password,
+        loadingStatus: false
       });
     });
   }
@@ -55,15 +63,17 @@ class EditBioModal extends React.Component {
   updateExistingBio = evt => {
     evt.preventDefault(); // stops evt?
     this.setState({ loadingStatus: true });
+    // creates edited event object with the values that we type in inputs
     const editedBio = {
-      // creates edited event object with the values that we type in inputs
       bio: this.state.bio,
-      userId: this.state.userId
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password
     };
-
+    console.log(editedBio)
+    // invokes editEvent function from EvenList.js, passes edited object and the id, and then closes modal
     this.props
-      // invokes editEvent function from EvenList.js, passes edited object and the id, and then closes modal
-      .editedBio(editedBio, this.props.users.id)
+      .editBio(editedBio, this.state.userId)
       .then(() => this.toggle());
   };
 
@@ -90,7 +100,7 @@ class EditBioModal extends React.Component {
           {" "}
           {/* button that makes the modal appear. the button toggles the modal on click */}
           <Button color="primary" onClick={this.toggle}>
-            Edit Bio
+            {this.state.bio === "" ? "Add Bio" : "Edit Bio"}
           </Button>
         </Form>
         {/* Modal that contains the input fields to edit event */}
@@ -114,7 +124,7 @@ class EditBioModal extends React.Component {
           </ModalBody>
           <ModalFooter>
             {/* put buttons */}
-            <Button color="primary" onClick={this.updateExistingRecipe}>
+            <Button color="primary" onClick={this.updateExistingBio}>
               Submit
             </Button>{" "}
             <Button color="secondary" onClick={this.toggle}>
