@@ -1,21 +1,21 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  get(id) {
+  getRecipes(id) {
     return fetch(`${remoteURL}/recipes/${id}`)
     .then(result => result.json())
   },
-  getAll() {
+  getAllRecipes() {
     return fetch(`${remoteURL}/recipes`)
     .then(result => result.json())
   },
-  delete(id) {
+  deleteRecipe(id) {
     return fetch(`http://localhost:5002/recipes/${id}`, {
         method: "DELETE"
     })
     .then(result => result.json())
   },
-  post(newRecipe) {
+  postRecipe(newRecipe) {
     return fetch(`${remoteURL}/recipes`, {
         method: "POST",
         headers: {

@@ -1,47 +1,42 @@
 import React, { Component } from 'react';
 import AuthenticationManager from '.././modules/AuthenticationManager';
 import EditBioModal from './EditBioModal';
+import ProfileManager from '../modules/ProfileManager'
 
 
 class MainView extends Component {
     state = {
         user: {
             username: "",
-            bio: ""
+            bio: "",
+            email: "",
+            password: ""
         }
     }
     componentDidMount() {
         AuthenticationManager.getUser(this.props.activeUser()).then(user =>
             this.setState(user))
     }
-    renderBio = () => {
-        console.log(this.state)
-        return (
-            <form>
-                <label>
-                    Bio:
-              <textarea type="text" name="name" />
-                </label>
-                <input type="submit" value="Submit" />
-                {/* refactor button */}
 
-            </form>
-        );
-    }
 
     editBio = (obj, id) => {
-        return AuthenticationManager.editBio(obj, id).then(() => {
-            AuthenticationManager.getAll(this.props.activeUser()).then(bio => {
-                this.setState({
-                    bio: bio
-                });
-            });
+        return ProfileManager.editBio(obj, id).then(() => {
+            AuthenticationManager.getUser(this.props.activeUser()).then(user =>
+                this.setState(user))
         })
     }
+
+    // postNewBio = obj => {
+    //     return ProfileManager.postNewBio(obj).then((bio) => {
+    //         this.setState
+
+    //     });
+    // }
     render() {
         return (
           <React.Fragment>
-              {this.renderBio()}
+             <h3>{this.state.username}</h3>
+             <p>{this.state.bio}</p>
             <section className="button__container">
               <EditBioModal editBio={this.editBio} {...this.props} />
             </section>

@@ -9,7 +9,7 @@ class RecipeList extends Component {
     }
 
    componentDidMount() {
-    RecipeManager.getAll()
+    RecipeManager.getAllRecipes()
     .then((recipes) => {
         this.setState({
             recipes: recipes
@@ -18,8 +18,8 @@ class RecipeList extends Component {
    }
 
    addNewRecipe = obj => {
-    return RecipeManager.post(obj).then(() => {
-      RecipeManager.getAll(this.props.activeUser()).then(recipes => {
+    return RecipeManager.postRecipe(obj).then(() => {
+      RecipeManager.getAllRecipes(this.props.activeUser()).then(recipes => {
             this.setState({
               recipes: recipes
             });
@@ -28,9 +28,9 @@ class RecipeList extends Component {
 }
 
    deleteRecipe = id => {
-    return RecipeManager.delete(id)
+    return RecipeManager.deleteRecipe(id)
     .then(() => {
-        RecipeManager.getAll(()=>this.props.activeUser())
+        RecipeManager.getAllRecipes(()=>this.props.activeUser())
         .then((recipes) => {
             this.setState({
               recipes: recipes
@@ -40,7 +40,7 @@ class RecipeList extends Component {
    }
    editRecipe = (obj, id) => {
     return RecipeManager.editRecipe(obj, id).then(() => {
-      RecipeManager.getAll(this.props.activeUser()).then(recipes => {
+      RecipeManager.getAllRecipes(this.props.activeUser()).then(recipes => {
             this.setState({
               recipes:recipes
             });
