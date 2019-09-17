@@ -20,8 +20,13 @@ class NavBar extends Component {
                       <Link className="nav-link" to="/recipes">
                           Recipe Book
                       </Link>
-
                       </li>
+                      <li className="nav-item">
+                      <Link className="nav-link" to="/profile">
+                        Profile
+                      </Link>
+                      </li>
+
               </ul>
             </nav>
           );
