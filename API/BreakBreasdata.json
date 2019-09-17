@@ -8,7 +8,7 @@
       "id": 1
     },
     {
-      "bio": "Oh my effing gosh! ",
+      "bio": "Many people may not know this, but Andy Collins is my dad!",
       "username": "andyismydad",
       "email": "mstiles01@icloud.com",
       "password": "1234",
@@ -17,16 +17,16 @@
   ],
   "recipes": [
     {
-      "name": "Bingo",
-      "type": "dcdc",
-      "ingredients": "adsfdf",
+      "name": "what",
+      "type": "up",
+      "ingredients": "homieee",
       "userId": 2,
       "id": 4
     },
     {
-      "name": "asd.fja",
-      "type": "daslfj",
-      "ingredients": "asd.kfj",
+      "name": "Test this b",
+      "type": "hahaha",
+      "ingredients": "Yasssss",
       "userId": 2,
       "id": 5
     },
@@ -36,6 +36,13 @@
       "ingredients": "jb ;jb ",
       "userId": 2,
       "id": 7
+    },
+    {
+      "name": "hjbubjb",
+      "type": "jbjbjb",
+      "ingredients": "jbjbjbjb",
+      "userId": 2,
+      "id": 8
     }
   ]
 }

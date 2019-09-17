@@ -17,6 +17,7 @@ class EditRecipeModal extends React.Component {
         modal: false,
         unmountOnClose: true,
         // put properties here
+        recipes: [],
         userId: "",
         name: "",
         type: "",
@@ -43,13 +44,14 @@ class EditRecipeModal extends React.Component {
   // function that takes the id of an event (from an API method) and changes the state of the event
   componentDidMount() {
     // getEvent fetch. fetches a single event to be edited
-    RecipeManager.getRecipes(this.props.recipes.id).then(recipes => {
+    RecipeManager.getRecipes(this.props.recipeId).then(recipes => {
       this.setState({
         // changing state of the event object from the getEvent
         name: recipes.name,
         type: recipes.type,
         ingredients: recipes.ingredients,
-        userId: recipes.userId
+        userId: recipes.userId,
+        id: recipes.id
       });
     });
   }
@@ -63,12 +65,13 @@ class EditRecipeModal extends React.Component {
       name: this.state.name,
       type: this.state.type,
       ingredients: this.state.ingredients,
-      userId: this.state.userId
+      userId: this.state.userId,
+      id: this.props.recipeId
     };
 
+    // invokes editEvent function from EvenList.js, passes edited object and the id, and then closes modal
     this.props
-      // invokes editEvent function from EvenList.js, passes edited object and the id, and then closes modal
-      .editRecipe(editedRecipe, this.props.recipes.id)
+      .editRecipe(editedRecipe, this.props.recipeId)
       .then(() => this.toggle());
   };
 

@@ -38,15 +38,7 @@ class RecipeList extends Component {
         });
     });
    }
-   editRecipe = (obj, id) => {
-    return RecipeManager.editRecipe(obj, id).then(() => {
-      RecipeManager.getAllRecipes(this.props.activeUser()).then(recipes => {
-            this.setState({
-              recipes:recipes
-            });
-        });
-    })
-}
+ 
    render() {
     return (
       <React.Fragment>
