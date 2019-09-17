@@ -7,6 +7,7 @@ import RecipeList from "./recipe/RecipeList"
 import RecipeDetail from "./recipe/RecipeDetail"
 import MainView from "./profile/MainView"
 import BookList from "./recipebook/BookList"
+import RecipeBookList from "./recipebook/recipeBookList"
 
 
 export default class ApplicationViews extends Component {
@@ -51,6 +52,16 @@ export default class ApplicationViews extends Component {
           render={props => {
             if (this.isAuthenticated()) {
               return <BookList activeUser={this.activeUser} {...props} />;
+              // Remove null and return the component which will show news articles
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/recipeBooks/:recipeBookId(\d+)"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return <RecipeBookList activeUser={this.activeUser} bookId={parseInt(props.match.params.recipeBookId)} {...props} />;
               // Remove null and return the component which will show news articles
             }
           }}
