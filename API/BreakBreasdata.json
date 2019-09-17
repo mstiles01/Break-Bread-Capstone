@@ -17,33 +17,20 @@
   ],
   "recipes": [
     {
-      "name": "what",
-      "type": "up",
-      "ingredients": "homieee",
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "name": "Test this b",
-      "type": "hahaha",
-      "ingredients": "Yasssss",
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "name": "/ljn;jo",
-      "type": "jn;jb",
-      "ingredients": "jb ;jb ",
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "name": "hjbubjb",
-      "type": "jbjbjb",
-      "ingredients": "jbjbjbjb",
-      "userId": 2,
+      "name": "Test 1",
+      "type": "Test 1",
+      "ingredients": "Test 1",
       "recipeBookId": 1,
-      "id": 8
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "Test 2",
+      "type": "2",
+      "ingredients": "2",
+      "recipeBookId": 2,
+      "userId": 2,
+      "id": 2
     }
   ],
   "recipeBooks": [
