@@ -19,7 +19,7 @@ class RecipeBookList extends Component {
 
    addNewRecipe = obj => {
     return RecipeManager.postRecipe(obj).then(() => {
-      RecipeManager.getAllRecipes(this.props.activeUser()).then(recipes => {
+        RecipeManager.getBookRecipes(this.props.bookId).then(recipes => {
             this.setState({
               recipes: recipes
             });
@@ -30,7 +30,7 @@ class RecipeBookList extends Component {
    deleteRecipe = id => {
     return RecipeManager.deleteRecipe(id)
     .then(() => {
-        RecipeManager.getAllRecipes(()=>this.props.activeUser())
+        RecipeManager.getBookRecipes(this.props.bookId)
         .then((recipes) => {
             this.setState({
               recipes: recipes

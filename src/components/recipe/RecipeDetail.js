@@ -9,6 +9,7 @@ class RecipeDetail extends Component {
         type: "",
         ingredients: "",
         id: "",
+        recipeBookId: "",
         loadingStatus: true,
     }
 
@@ -21,6 +22,7 @@ class RecipeDetail extends Component {
                 type: recipe.type,
                 ingredients: recipe.ingredients,
                 id: recipe.id,
+                bookId: recipe.recipeBookId,
                 loadingStatus: false
             });
         });
@@ -40,6 +42,7 @@ class RecipeDetail extends Component {
                 type: recipe.type,
                 ingredients: recipe.ingredients,
                 id: recipe.id,
+                bookId: recipe.recipeBookId,
                 loadingStatus: false
             });
         });
