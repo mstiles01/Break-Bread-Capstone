@@ -38,7 +38,7 @@ class addBookModal extends React.Component {
         description: this.state.description,
         userId: this.props.activeUser()
       };
-      this.props.addNewBook(book).then(() => this.toggle());
+      this.props.addNewBook(recipeBook).then(() => this.toggle());
     }
   };
   toggle() {
@@ -76,7 +76,7 @@ class addBookModal extends React.Component {
               placeholder="Add Book Name"
             />
             <Input
-            id="type"
+            id="description"
             type="text"
             onChange={this.handleFieldChange}
             placeholder="Add Book Description"

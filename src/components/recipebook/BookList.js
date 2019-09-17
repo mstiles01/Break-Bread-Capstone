@@ -9,7 +9,7 @@ class RecipeList extends Component {
     }
 
    componentDidMount() {
-    RecipeManager.getAllRecipes()
+    RecipeBookManager.getAllBooks()
     .then((recipeBooks) => {
         this.setState({
             recipeBooks: recipeBooks
@@ -19,7 +19,7 @@ class RecipeList extends Component {
 
    addNewRecipeBook = obj => {
     return RecipeBookManager.postBook(obj).then(() => {
-        RecipeBookManager.getAllBooks(this.props.activeUser()).then(recipes => {
+        RecipeBookManager.getAllBooks(this.props.activeUser()).then(recipeBooks => {
             this.setState({
               recipeBooks: recipeBooks
             });
@@ -30,7 +30,7 @@ class RecipeList extends Component {
    deleteRecipeBook = id => {
     return RecipeBookManager.deleteBook(id)
     .then(() => {
-        RecipeManager.getAllRecipes(()=>this.props.activeUser())
+        RecipeBookManager.getAllBooks(()=>this.props.activeUser())
         .then((recipeBooks) => {
             this.setState({
                 recipeBooks: recipeBooks
@@ -48,7 +48,7 @@ class RecipeList extends Component {
         <div className="cards__container">
           {this.state.recipeBooks.map(recipeBooks => (
             <BookCard
-              key={recipes.id}
+              key={recipeBooks.id}
               recipeBooks={recipeBooks}
               editRecipeBook={this.editRecipeBook}
               deleteRecipeBook={this.deleteRecipeBook}
