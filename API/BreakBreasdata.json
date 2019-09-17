@@ -31,6 +31,22 @@
       "recipeBookId": 2,
       "userId": 2,
       "id": 2
+    },
+    {
+      "name": "Hello ",
+      "type": "Hello Boy",
+      "ingredients": "Hello Boy-o!",
+      "recipeBookId": 2,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "name": "Gungun SHit",
+      "type": "Its nasty",
+      "ingredients": "Boi's Hot",
+      "recipeBookId": 3,
+      "userId": 2,
+      "id": 4
     }
   ],
   "recipeBooks": [
@@ -45,6 +61,12 @@
       "description": "HI",
       "userId": 2,
       "id": 2
+    },
+    {
+      "name": "Star Wars Theme",
+      "description": "I love Star Wars, here are recipes that support that claim",
+      "userId": 2,
+      "id": 3
     }
   ]
 }
