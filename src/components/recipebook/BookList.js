@@ -3,7 +3,7 @@ import BookCard from './BookCard'
 import RecipeBookManager from '../modules/RecipeBookManager'
 import AddBookModal from './AddBookModal'
 
-class RecipeList extends Component {
+class BookList extends Component {
     state = {
       recipeBooks: [],
     }
@@ -43,7 +43,7 @@ class RecipeList extends Component {
     return (
       <React.Fragment>
         <section className="button__container">
-          <AddBookModal addNewRecipe={this.addNewBook} {...this.props} />
+          <AddBookModal addNewRecipeBook={this.addNewRecipeBook} {...this.props} />
         </section>
         <div className="cards__container">
           {this.state.recipeBooks.map(recipeBooks => (
@@ -61,4 +61,4 @@ class RecipeList extends Component {
   }
 }
 
-export default RecipeList
+export default BookList

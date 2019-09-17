@@ -33,12 +33,12 @@ class addBookModal extends React.Component {
       window.alert("Please fill out the form right, idiot head.");
     } else {
       this.setState({ loadingStatus: true });
-      const recipeBook = {
+      const recipeBooks = {
         name: this.state.name,
         description: this.state.description,
         userId: this.props.activeUser()
       };
-      this.props.addNewBook(recipeBook).then(() => this.toggle());
+      this.props.addNewRecipeBook(recipeBooks).then(() => this.toggle());
     }
   };
   toggle() {
