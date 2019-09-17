@@ -34,4 +34,9 @@ editRecipe(editedRecipeObj, editedRecipeId) {
       body: JSON.stringify(editedRecipeObj)
     }).then(data => data.json());
   },
+
+  getBookRecipes(BookId) {
+    return fetch(`${remoteURL}/recipes?recipeBookId=${BookId}`)
+    .then(result => result.json())
+  }
 }

@@ -42,7 +42,22 @@
       "type": "jbjbjb",
       "ingredients": "jbjbjbjb",
       "userId": 2,
+      "recipeBookId": 1,
       "id": 8
+    }
+  ],
+  "recipeBooks": [
+    {
+      "name": "Michael's Goodtime Recipes Book",
+      "description": "In this book, are recipes, these recipes you can choose to make or not. It's America, do what you want",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "Hi",
+      "description": "HI",
+      "userId": 2,
+      "id": 2
     }
   ]
 }

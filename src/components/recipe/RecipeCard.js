@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import EditRecipeModal from "./EditRecipeModal"
+
 
 class RecipeCard extends Component {
     render() {
@@ -16,7 +16,7 @@ class RecipeCard extends Component {
             </div>
         );
 
-        
+
     }
 }
 
