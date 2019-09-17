@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AuthenticationManager from '.././modules/AuthenticationManager';
 import EditBioModal from './EditBioModal';
 import ProfileManager from '../modules/ProfileManager'
+import BookList from '../recipebook/BookList'
 
 
 class MainView extends Component {
@@ -40,6 +41,9 @@ class MainView extends Component {
             <section className="button__container">
               <EditBioModal editBio={this.editBio} {...this.props} />
             </section>
+          <section className="recipe__book__container">
+            <BookList/>
+          </section>
 
           </React.Fragment>
         );
