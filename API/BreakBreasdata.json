@@ -40,13 +40,6 @@
       "id": 4
     },
     {
-      "name": "j,bv ",
-      "type": ",jgv ",
-      "ingredients": "jvg",
-      "userId": 2,
-      "id": 6
-    },
-    {
       "name": "Clone Test ",
       "type": "Clone Test ",
       "ingredients": "Clone Test ",
@@ -67,6 +60,24 @@
       "description": "I love Star Wars, here are recipes that support that claim",
       "userId": 2,
       "id": 3
+    },
+    {
+      "name": "j jn",
+      "description": " njnj",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "name": "qwerew",
+      "description": "qewrqewr",
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "name": "ewrfqwerqe",
+      "description": "qwdfwef334",
+      "userId": 3,
+      "id": 9
     }
   ]
 }

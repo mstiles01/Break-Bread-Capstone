@@ -6,6 +6,7 @@ import AddBookModal from './AddBookModal'
 class BookList extends Component {
     state = {
       recipeBooks: [],
+
     }
 
    componentDidMount() {
@@ -40,22 +41,30 @@ class BookList extends Component {
    }
 
    render() {
+    //  console.log(this.state.recipeBooks)
+    // const activeUser = parseInt(sessionStorage.getItem("credentials"))
+    // const checkUser = this.state.recipeBooks.userId === this.props.activeUser()
     return (
       <React.Fragment>
         <section className="button__container">
           <AddBookModal addNewRecipeBook={this.addNewRecipeBook} {...this.props} />
         </section>
-        <div className="cards__container">
-          {this.state.recipeBooks.map(recipeBooks => (
+
+
+          {this.state.recipeBooks.map(recipeBook => (
+          recipeBook.userId === this.props.activeUser() ?
+             <div className="cards__container">
             <BookCard
-              key={recipeBooks.id}
-              recipeBooks={recipeBooks}
+              key={recipeBook.id}
+              recipeBooks={recipeBook}
               editRecipeBook={this.editRecipeBook}
               deleteRecipeBook={this.deleteRecipeBook}
               {...this.props}
-            />
+              />
+              </div>
+              : null
           ))}
-        </div>
+
       </React.Fragment>
     );
   }
