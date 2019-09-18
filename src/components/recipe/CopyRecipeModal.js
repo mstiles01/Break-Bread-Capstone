@@ -26,15 +26,17 @@ class CopyRecipeModal extends Component {
         const newRecipeCard = {
             name: this.props.recipes.name,
             userId: this.state.activeUserId,
-            description: this.props.recipes.type,
-            isComplete: false,
-            isOriginal: false,
-            timesCopied: 0
+            type: this.props.recipes.type,
+            ingredients: this.props.recipes.ingredients
+
         }
 
-        // post the new skill to database, pass the id to cloneResources and copy all the resources
-        this.props.copyRecipe(newRecipeCard).then(postedRecipe => {
-            this.cloneResources(postedRecipe.id)
+        // post the new recipe to database, pass the id to cloneResources and copy all the resources
+        this.props.copyRecipe(newRecipeCard)
+        .then(postedRecipe => {
+            console.log(postedRecipe)
+            // this.cloneResources(postedRecipe.id)
+            this.props.copiedRecipeState(postedRecipe)
         }).then(this.toggle);
     }
 

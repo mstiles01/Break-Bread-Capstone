@@ -5,53 +5,64 @@ import AddRecipeModal from './AddRecipeModal'
 import BookListManager from '../modules/RecipeBookManager'
 
 class RecipeList extends Component {
-    state = {
-      recipes: [],
-      bookList: []
-    }
+  state = {
+    recipes: [],
+    bookList: []
+  }
 
-   componentDidMount() {
+  componentDidMount() {
     RecipeManager.getAllRecipes()
-    .then((recipes) => {
+      .then((recipes) => {
         this.setState({
-            recipes: recipes
+          recipes: recipes
         })
-    })
+      })
     this.getBookList()
-   }
+  }
 
-   addNewRecipe = obj => {
+  addNewRecipe = obj => {
     return RecipeManager.postRecipe(obj).then(() => {
       RecipeManager.getAllRecipes(this.props.activeUser()).then(recipes => {
-            this.setState({
-              recipes: recipes
-            });
+        this.setState({
+          recipes: recipes
         });
+      });
     });
-}
+  }
 
-   deleteRecipe = id => {
+  deleteRecipe = id => {
     return RecipeManager.deleteRecipe(id)
-    .then(() => {
-        RecipeManager.getAllRecipes(()=>this.props.activeUser())
-        .then((recipes) => {
+      .then(() => {
+        RecipeManager.getAllRecipes(() => this.props.activeUser())
+          .then((recipes) => {
             this.setState({
               recipes: recipes
             });
-        });
-    });
-   }
+          });
+      });
+  }
 
-   getBookList() {
+  getBookList() {
     BookListManager.getAllBooks()
-    .then((bookList) => {
+      .then((bookList) => {
         this.setState({
           bookList: bookList
         })
-    })
-   }
+      })
+  }
 
-   render() {
+  copiedRecipeState = (obj) => {
+    this.setState({
+      copiedRecipeList: obj
+    })
+  }
+
+  copyRecipe = (RecipeObj) => {
+    console.log(RecipeObj)
+    return RecipeManager.postRecipe(RecipeObj)
+  }
+
+  render() {
     return (
       <React.Fragment>
         <section className="button__container">
@@ -62,8 +73,9 @@ class RecipeList extends Component {
             <RecipeCard
               key={recipes.id}
               recipes={recipes}
-              editRecipe={this.editRecipe}
               deleteRecipe={this.deleteRecipe}
+              copyRecipe={this.copyRecipe}
+              copiedRecipeState={this.copiedRecipeState}
               {...this.props}
             />
           ))}
