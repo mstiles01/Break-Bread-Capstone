@@ -17,6 +17,7 @@ class recipeAddModal extends React.Component {
       name: "",
       type: "",
       ingredients: "",
+      recipeBookId: "",
       loadingStatus: false
       // put properties here
     };
@@ -76,21 +77,35 @@ class recipeAddModal extends React.Component {
               id="name"
               type="text"
               onChange={this.handleFieldChange}
-              placeholder="Add Name"
+              placeholder="Add Recipe Name"
             />
             <Input
-            id="type"
-            type="text"
-            onChange={this.handleFieldChange}
-            placeholder="Add Type"
-          />
-           <Input
+              id="type"
+              type="text"
+              onChange={this.handleFieldChange}
+              placeholder="Add Cusine Type"
+            />
+            <Input
               id="ingredients"
               type="text"
               onChange={this.handleFieldChange}
               placeholder="Add Ingredients"
 
             />
+
+            <select
+              defaultValue=""
+              name="RecipeBookId"
+              id="RecipeBookDropDown"
+              onChange={this.handleFieldChange}
+            >
+              <option value="">Select Recipe Book</option>
+              {this.props.bookList.map(book => (
+                <option key={book.recipeBookId} id={book.recipeBookId} value={book.recipeBookId}>
+                  {book.name}
+                </option>
+              ))}
+            </select>
 
           </ModalBody>
           <ModalFooter>
