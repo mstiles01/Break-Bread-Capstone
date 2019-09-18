@@ -13,6 +13,13 @@
       "email": "mstiles01@icloud.com",
       "password": "1234",
       "id": 2
+    },
+    {
+      "bio": "Hellow",
+      "username": "MichaelIsmydad",
+      "email": "h1@abc.com",
+      "password": "1",
+      "id": 3
     }
   ],
   "recipes": [
@@ -25,28 +32,27 @@
       "id": 1
     },
     {
-      "name": "Test 2",
-      "type": "2",
-      "ingredients": "2",
-      "recipeBookId": 2,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "name": "Hello ",
-      "type": "Hello Boy",
-      "ingredients": "Hello Boy-o!",
-      "recipeBookId": 2,
-      "userId": 2,
-      "id": 3
-    },
-    {
       "name": "Gungun SHit",
       "type": "Its nasty",
       "ingredients": "Boi's Hot",
       "recipeBookId": 3,
       "userId": 2,
       "id": 4
+    },
+    {
+      "name": "j,bv ",
+      "type": ",jgv ",
+      "ingredients": "jvg",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "Clone Test ",
+      "type": "Clone Test ",
+      "ingredients": "Clone Test ",
+      "recipeBookId": 1,
+      "userId": 2,
+      "id": 7
     }
   ],
   "recipeBooks": [
@@ -55,12 +61,6 @@
       "description": "In this book, are recipes, these recipes you can choose to make or not. It's America, do what you want",
       "userId": 2,
       "id": 1
-    },
-    {
-      "name": "Hi",
-      "description": "HI",
-      "userId": 2,
-      "id": 2
     },
     {
       "name": "Star Wars Theme",

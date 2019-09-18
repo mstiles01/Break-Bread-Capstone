@@ -130,6 +130,12 @@ class EditRecipeModal extends React.Component {
               onChange={this.handleFieldChange}
               value={this.state.ingredients}
             />
+             <select>
+              <option placeholder="Select Recipe Book" value="">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+              </select>
           </ModalBody>
           <ModalFooter>
             {/* put buttons */}

@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import RecipeCard from './RecipeCard'
 import RecipeManager from '../modules/RecipeManager'
 import AddRecipeModal from './AddRecipeModal'
+import BookListManager from '../modules/RecipeBookManager'
 
 class RecipeList extends Component {
     state = {
       recipes: [],
+      bookList: []
     }
 
    componentDidMount() {
@@ -15,6 +17,7 @@ class RecipeList extends Component {
             recipes: recipes
         })
     })
+    this.getBookList()
    }
 
    addNewRecipe = obj => {
@@ -38,12 +41,21 @@ class RecipeList extends Component {
         });
     });
    }
- 
+
+   getBookList() {
+    BookListManager.getAllBooks()
+    .then((bookList) => {
+        this.setState({
+          bookList: bookList
+        })
+    })
+   }
+
    render() {
     return (
       <React.Fragment>
         <section className="button__container">
-          <AddRecipeModal addNewRecipe={this.addNewRecipe} {...this.props} />
+          <AddRecipeModal addNewRecipe={this.addNewRecipe} bookList={this.state.bookList} {...this.props} />
         </section>
         <div className="cards__container">
           {this.state.recipes.map(recipes => (
