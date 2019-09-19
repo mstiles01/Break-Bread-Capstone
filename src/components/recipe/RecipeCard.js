@@ -8,13 +8,15 @@ import BookListManager from '../modules/RecipeBookManager'
 class RecipeCard extends Component {
     state = {
         recipes: [],
-        bookList: []
+        bookList: [],
+        userId: 0
     }
 
     componentDidMount() {
         RecipeManager.getRecipes(this.props.recipes.id).then(recipes => {
             this.setState({
-                recipes: recipes
+                recipes: recipes,
+                userId: recipes.userId
             })
         })
         this.getBookList()
@@ -30,6 +32,8 @@ class RecipeCard extends Component {
 
 
     render() {
+        const activeUser = parseInt(sessionStorage.getItem("credentials"))
+      const checkUser = this.state.userId === activeUser
         return (
             <div className="card">
                 <div className="card-content">
@@ -41,8 +45,12 @@ class RecipeCard extends Component {
                         bookList={this.state.bookList}
                         {...this.props}
                     />
-
+                    { checkUser ?
+                    <div className="deleteBTN">
                     <button type="button" onClick={() => this.props.deleteRecipe(this.props.recipes.id)}>Scrap This!</button>
+                    </div>
+                    : null
+                }
                     <Link to={`/recipes/${this.props.recipes.id}`}><button>Recipe Details</button></Link>
 
 
