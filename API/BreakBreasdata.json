@@ -31,47 +31,42 @@
   ],
   "recipes": [
     {
+      "name": "Hello",
+      "type": "hello",
+      "ingredients": "hekki",
+      "recipeBookId": 1,
+      "userId": 1,
+      "id": 1
+    },
+    {
       "name": "Test this b",
       "type": "hahaha",
       "ingredients": "dasfdfs",
       "recipeBookId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Hello",
+      "userId": 1,
+      "type": "hello",
+      "ingredients": "hekki",
+      "recipeBookId": 1,
+      "id": 4
+    }
+  ],
+  "recipeBooks": [
+    {
+      "name": "Michael Stiles Test",
+      "description": "I love Star Wars, here are recipes that support that claim",
       "userId": 2,
       "id": 1
     },
     {
       "name": "Test this b",
-      "userId": 2,
-      "type": "hahaha",
-      "ingredients": "dasfdfs",
-      "recipeBookId": 2,
+      "description": "Test",
+      "userId": 1,
       "id": 2
-    },
-    {
-      "name": "ADSF",
-      "type": "DSAF",
-      "ingredients": "DASF",
-      "recipeBookId": 2,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "XZCVFADSF",
-      "type": "CVADV",
-      "ingredients": "DSAFDSF",
-      "recipeBookId": 4,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "Test this b",
-      "userId": 1,
-      "type": "hahaha",
-      "ingredients": "dasfdfs",
-      "recipeBookId": 4,
-      "id": 5
     }
-  ],
-  "recipeBooks": [
-    
   ]
 }

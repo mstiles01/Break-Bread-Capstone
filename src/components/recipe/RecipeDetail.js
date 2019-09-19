@@ -66,8 +66,7 @@ class RecipeDetail extends Component {
     render() {
       const activeUser = parseInt(sessionStorage.getItem("credentials"))
       const checkUser = this.state.userId === activeUser
-        console.log("turd nugget", activeUser)
-        console.log("hello", this.state.userId)
+    
       return (
 
 

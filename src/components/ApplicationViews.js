@@ -17,7 +17,6 @@ export default class ApplicationViews extends Component {
   activeUser = () => parseInt(sessionStorage.getItem("credentials"));
 
   render() {
-    console.log(this.activeUser());
     return (
       <React.Fragment>
         <Route path="/login" component={Login} />
