@@ -20,115 +20,29 @@
       "email": "h1@abc.com",
       "password": "1",
       "id": 3
+    },
+    {
+      "bio": "Hello! I am Turd BoI!",
+      "username": "turdboi",
+      "email": "turd@turd.com",
+      "password": "1234",
+      "id": 4
     }
   ],
   "recipes": [
     {
-      "name": "Test 1",
-      "userId": 3,
-      "type": "Test 1",
-      "ingredients": "Clone test 1",
-      "id": 3
+      "name": "turd boy",
+      "userId": 2,
+      "type": "turd boy",
+      "ingredients": "turd boy",
+      "id": 21
     },
     {
-      "name": "HI!",
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "recipeBookId": 7,
-      "userId": 3,
-      "id": 4
-    },
-    {
-      "name": "Hello",
-      "type": "Hello",
-      "ingredients": "Hello",
-      "recipeBookId": 7,
-      "userId": 3,
-      "id": 5
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 6
-    },
-    {
-      "name": "Test 1",
-      "userId": 3,
-      "type": "Test 1",
-      "ingredients": "Clone test 1",
-      "id": 7
-    },
-    {
-      "name": "Hello",
-      "userId": 3,
-      "type": "Hello",
-      "ingredients": "Hello",
-      "id": 8
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 9
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 10
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 11
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 12
-    },
-    {
-      "name": "Hello",
-      "userId": 3,
-      "type": "Hello",
-      "ingredients": "Hello",
-      "id": 13
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 14
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 15
-    },
-    {
-      "name": "HI!",
-      "userId": 3,
-      "type": "hi!",
-      "ingredients": "Hi1",
-      "id": 16
-    },
-    {
-      "name": "vdvd",
-      "type": "vdvd",
-      "ingredients": "vdvdvd",
-      "userId": 3,
-      "id": 17
+      "name": "turd boy",
+      "userId": 2,
+      "type": "turd boy",
+      "ingredients": "turd boy",
+      "id": 22
     }
   ],
   "recipeBooks": [
@@ -161,6 +75,18 @@
       "description": "qwdfwef334",
       "userId": 3,
       "id": 9
+    },
+    {
+      "name": "vluc",
+      "description": "k,vyf",
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "name": "Test",
+      "description": "Test",
+      "userId": 4,
+      "id": 11
     }
   ]
 }

@@ -8,6 +8,8 @@ import RecipeDetail from "./recipe/RecipeDetail"
 import MainView from "./profile/MainView"
 import BookList from "./recipebook/BookList"
 import RecipeBookList from "./recipebook/recipeBookList"
+import ProfilePage from './profile/MainView'
+
 
 
 export default class ApplicationViews extends Component {
@@ -20,7 +22,20 @@ export default class ApplicationViews extends Component {
       <React.Fragment>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/welcome" component={WelcomePage} />
+        <Route exact path="/" render={props => {
+          if (this.isAuthenticated()) {
+            return <ProfilePage
+              activeUser={this.activeUser}
+              profile={this.profile}
+              userId={parseInt(props.match.params.userId)}
+              {...props}
+            />
+          }
+        }
+        }
+
+
+          component={WelcomePage} />
         <Route
           exact
           path="/recipes"
@@ -46,7 +61,7 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
-       <Route
+        <Route
           exact
           path="/BookList"
           render={props => {

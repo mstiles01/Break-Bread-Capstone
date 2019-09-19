@@ -21,7 +21,7 @@ class Login extends Component {
             checkedUsers => {
                 if (checkedUsers.length > 0) {
                     sessionStorage.setItem("credentials", checkedUsers[0].id);
-                    this.props.history.push("/home");
+                    this.props.history.push("/profile");
                 } else {
                     alert("Invalid email or password");
                 }
@@ -63,7 +63,7 @@ class Login extends Component {
                         </div>
                         <button type="submit">Sign In</button>
                         <p>Or</p>
-                        
+
                         <Link to={`/register`}>
                             <button>Sign Up!</button>
                         </Link>

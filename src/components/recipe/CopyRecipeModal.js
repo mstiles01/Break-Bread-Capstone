@@ -35,7 +35,7 @@ class CopyRecipeModal extends Component {
         this.props.copyRecipe(newRecipeCard)
         .then(postedRecipe => {
             console.log(postedRecipe)
-            // this.cloneResources(postedRecipe.id)
+            this.cloneResources(postedRecipe.id)
             this.props.copiedRecipeState(postedRecipe)
         }).then(this.toggle);
     }

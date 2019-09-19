@@ -1,19 +1,43 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom"
+// Purpose: Export Welcome Page Component
 
-class WelcomePage extends Component {
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { Container, Row, Col, Jumbotron } from "reactstrap";
 
-render () {
+
+export default class Welcome extends Component {
+  render() {
     return (
-        <div className="jumbotron">
-          <h1 className="display-4">Start Making With Break Bread!</h1>
-          <p><Link className="welcome-link" to="../auth/Register">Click Here to Register</Link></p>
-          <p><Link className="welcome-link" to="/Login">Existing Users Log In Here</Link></p>
-        </div>
-      )
-
+      <Jumbotron>
+        <React.Fragment>
+          <Container id="welcomeContainer">
+            <Row>
+              <Col className="welcomePage">
+                <h1 id="header">Welcome To BreakBread</h1>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="welcomePage">
+                <Link to="/register">
+                  <p>Register</p>
+                </Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="welcomePage">
+                <p>or</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="welcomePage">
+                <Link to="/login">
+                  <p>Login</p>
+                </Link>
+              </Col>
+            </Row>
+          </Container>
+        </React.Fragment>
+      </Jumbotron>
+    );
+  }
 }
-
-}
-
-export default WelcomePage;
