@@ -31,18 +31,64 @@
   ],
   "recipes": [
     {
-      "name": "turd boy",
+      "name": "hi",
+      "type": "hi",
+      "ingredients": "hi",
+      "recipeBookId": 1,
       "userId": 2,
-      "type": "turd boy",
-      "ingredients": "turd boy",
-      "id": 21
+      "id": 1
     },
     {
-      "name": "turd boy",
+      "name": "hi",
       "userId": 2,
-      "type": "turd boy",
-      "ingredients": "turd boy",
-      "id": 22
+      "type": "hi",
+      "ingredients": "hi",
+      "id": 2
+    },
+    {
+      "name": "Copy Book Test",
+      "type": "Copy Book Test",
+      "ingredients": "Copy Book Test",
+      "recipeBookId": 1,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "name": "Copy Book Test",
+      "userId": 2,
+      "type": "Copy Book Test",
+      "ingredients": "Copy Book Test",
+      "id": 4
+    },
+    {
+      "name": "hi",
+      "userId": 2,
+      "type": "hi",
+      "ingredients": "hi",
+      "id": 5
+    },
+    {
+      "name": "Michael Stiles Test",
+      "type": "Michael Stiles Test",
+      "ingredients": "Michael Stiles Test",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "Test TK421",
+      "type": "Test TK421",
+      "ingredients": "Test TK421",
+      "recipeBookId": "Star Wars Theme",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "Test 221",
+      "type": "Test 221",
+      "ingredients": "Test 221",
+      "recipeBookId": 3,
+      "userId": 2,
+      "id": 8
     }
   ],
   "recipeBooks": [
@@ -77,16 +123,16 @@
       "id": 9
     },
     {
-      "name": "vluc",
-      "description": "k,vyf",
-      "userId": 2,
-      "id": 10
-    },
-    {
       "name": "Test",
       "description": "Test",
       "userId": 4,
       "id": 11
+    },
+    {
+      "name": "Fuck You",
+      "description": "fggefge",
+      "userId": 2,
+      "id": 12
     }
   ]
 }

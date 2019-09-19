@@ -21,11 +21,7 @@ class NavBar extends Component {
         return (
             <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
               <ul className="nav nav-pills nav-fill">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/profile">
-                    Home
-                  </Link>
-                  </li>
+                
                   <li className="nav-item">
                       <Link className="nav-link" to="/BookList">
                           Recipe Book
