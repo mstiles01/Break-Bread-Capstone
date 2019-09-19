@@ -31,12 +31,20 @@
   ],
   "recipes": [
     {
-      "name": "fuck you ",
-      "type": "fuck you",
-      "ingredients": "fuck you ",
+      "name": "Test this b",
+      "type": "hahaha",
+      "ingredients": "dasfdfs",
       "recipeBookId": 1,
       "userId": 2,
-      "id": 3
+      "id": 1
+    },
+    {
+      "name": "Test this b",
+      "userId": 2,
+      "type": "hahaha",
+      "ingredients": "dasfdfs",
+      "recipeBookId": 2,
+      "id": 2
     }
   ],
   "recipeBooks": [
@@ -45,6 +53,18 @@
       "description": "Hello!",
       "userId": 2,
       "id": 1
+    },
+    {
+      "name": "kmm",
+      "description": "kmnknkn",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "Test this b",
+      "description": "Test",
+      "userId": 2,
+      "id": 3
     }
   ]
 }
