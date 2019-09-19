@@ -8,10 +8,13 @@ class CopyRecipeModal extends Component {
             modal: false,
             activeUserId: parseInt(sessionStorage.getItem("credentials")),
             newRecipeId: 0,
-            recipes: []
+            recipes: [],
+            bookList: [],
+            recipeBookId: ""
         }
 
         this.toggle = this.toggle.bind(this);
+
     }
 
     toggle() {
@@ -27,17 +30,18 @@ class CopyRecipeModal extends Component {
             name: this.props.recipes.name,
             userId: this.state.activeUserId,
             type: this.props.recipes.type,
-            ingredients: this.props.recipes.ingredients
+            ingredients: this.props.recipes.ingredients,
+            recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
 
         }
 
         // post the new recipe to database, pass the id to cloneResources and copy all the resources
         this.props.copyRecipe(newRecipeCard)
-        .then(postedRecipe => {
-            console.log(postedRecipe)
-            this.cloneResources(postedRecipe.id)
-            this.props.copiedRecipeState(postedRecipe)
-        }).then(this.toggle);
+            .then(postedRecipe => {
+                console.log(postedRecipe)
+                this.cloneResources(postedRecipe.id)
+                this.props.copiedRecipeState(postedRecipe)
+            }).then(this.toggle);
     }
 
     cloneResources = (recipeId) => {
@@ -50,6 +54,7 @@ class CopyRecipeModal extends Component {
                 name: recipes.name,
                 type: recipes.type,
                 ingredients: recipes.ingredients,
+                recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
                 isComplete: false
             }
 
@@ -60,24 +65,40 @@ class CopyRecipeModal extends Component {
         newRecipeDetails.map(newRecipeDetail => this.props.copyRecipe(newRecipeDetail));
     }
 
+    handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value;
+        this.setState(stateToChange);
+    };
+
     render() {
-            return (
-                <>
+        return (
+            <>
                 <Button onClick={this.toggle} color="success">
-                        Copy Recipe
+                    Copy Recipe
                 </Button>
-                    <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                        <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
-                        <ModalBody>
-                            Are you sure you want to copy this recipe?
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                    <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
+                    <ModalBody>
+                        <select
+                            name="RecipeBookId"
+                            id="recipeBookId"
+                            onChange={this.handleFieldChange} >
+                            <option value="">Select Recipe Book</option>
+                            {this.props.bookList.map(book => (
+                                <option key={book.recipeBookId} value={book.recipeBookID}>
+                                    {book.name}
+                                </option>
+                            ))}
+                        </select>
                     </ModalBody>
-                        <ModalFooter>
-                            <Button onClick={this.handleSubmit} color="success">Yes</Button>
-                            <Button onClick={this.toggle} color="success">No</Button>
-                        </ModalFooter>
-                    </Modal>
-                </>
-            )
+                    <ModalFooter>
+                        <Button onClick={this.handleSubmit} color="success">Yes</Button>
+                        <Button onClick={this.toggle} color="success">No</Button>
+                    </ModalFooter>
+                </Modal>
+            </>
+        )
 
     }
 }

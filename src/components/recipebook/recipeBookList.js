@@ -63,6 +63,23 @@ class RecipeBookList extends Component {
     console.log(RecipeObj)
     return RecipeManager.postRecipe(RecipeObj)
   }
+  cloneResources = (recipeId) => {
+
+    const newRecipeDetails = this.state.recipes.map(recipes => {
+        // create resource object with the new skillId
+        const newRecipeDetail = {
+            recipeId: recipeId,
+            recipeId: recipes.id,
+            name: recipes.name,
+            type: recipes.type,
+            ingredients: recipes.ingredients,
+            recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+            isComplete: false
+        }
+
+        return newRecipeDetail;
+    })
+  }
 
 
    render() {
@@ -78,6 +95,7 @@ class RecipeBookList extends Component {
               recipes={recipes}
               copyRecipe={this.copyRecipe}
               copiedRecipeState={this.copiedRecipeState}
+              cloneResources={this.cloneResources}
               deleteRecipe={this.deleteRecipe}
               {...this.props}
             />

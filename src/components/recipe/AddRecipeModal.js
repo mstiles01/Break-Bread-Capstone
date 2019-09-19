@@ -32,7 +32,7 @@ class recipeAddModal extends React.Component {
   };
   constructNewRecipe = evt => {
     evt.preventDefault();
-    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "") {
+    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "") {
       window.alert("Please fill out the form right, idiot head.");
     } else {
       this.setState({ loadingStatus: true });
