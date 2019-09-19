@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import RecipeManager from "../modules/RecipeManager"
 import CopyRecipeModal from './CopyRecipeModal';
+import BookListManager from '../modules/RecipeBookManager'
 
 
 class RecipeCard extends Component {
     state = {
-        recipes: []
+        recipes: [],
+        bookList: []
     }
 
     componentDidMount() {
@@ -15,8 +17,16 @@ class RecipeCard extends Component {
                 recipes: recipes
             })
         })
+        this.getBookList()
     }
-
+    getBookList() {
+        BookListManager.getAllBooks()
+          .then((bookList) => {
+            this.setState({
+              bookList: bookList
+            })
+          })
+      }
 
 
     render() {
@@ -28,6 +38,7 @@ class RecipeCard extends Component {
 
                     <CopyRecipeModal
                         recipes={this.state.recipes}
+                        bookList={this.state.bookList}
                         {...this.props}
                     />
 

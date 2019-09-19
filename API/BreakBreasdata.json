@@ -31,108 +31,20 @@
   ],
   "recipes": [
     {
-      "name": "hi",
-      "type": "hi",
-      "ingredients": "hi",
+      "name": "test",
+      "type": "test",
+      "ingredients": "Test",
       "recipeBookId": 1,
       "userId": 2,
       "id": 1
-    },
-    {
-      "name": "hi",
-      "userId": 2,
-      "type": "hi",
-      "ingredients": "hi",
-      "id": 2
-    },
-    {
-      "name": "Copy Book Test",
-      "type": "Copy Book Test",
-      "ingredients": "Copy Book Test",
-      "recipeBookId": 1,
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "name": "Copy Book Test",
-      "userId": 2,
-      "type": "Copy Book Test",
-      "ingredients": "Copy Book Test",
-      "id": 4
-    },
-    {
-      "name": "hi",
-      "userId": 2,
-      "type": "hi",
-      "ingredients": "hi",
-      "id": 5
-    },
-    {
-      "name": "Michael Stiles Test",
-      "type": "Michael Stiles Test",
-      "ingredients": "Michael Stiles Test",
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "name": "Test TK421",
-      "type": "Test TK421",
-      "ingredients": "Test TK421",
-      "recipeBookId": "Star Wars Theme",
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "name": "Test 221",
-      "type": "Test 221",
-      "ingredients": "Test 221",
-      "recipeBookId": 3,
-      "userId": 2,
-      "id": 8
     }
   ],
   "recipeBooks": [
     {
-      "name": "Michael's Goodtime Recipes Book",
-      "description": "In this book, are recipes, these recipes you can choose to make or not. It's America, do what you want",
+      "name": "Hello!",
+      "description": "Hello!",
       "userId": 2,
       "id": 1
-    },
-    {
-      "name": "Star Wars Theme",
-      "description": "I love Star Wars, here are recipes that support that claim",
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "name": "j jn",
-      "description": " njnj",
-      "userId": 3,
-      "id": 7
-    },
-    {
-      "name": "qwerew",
-      "description": "qewrqewr",
-      "userId": 3,
-      "id": 8
-    },
-    {
-      "name": "ewrfqwerqe",
-      "description": "qwdfwef334",
-      "userId": 3,
-      "id": 9
-    },
-    {
-      "name": "Test",
-      "description": "Test",
-      "userId": 4,
-      "id": 11
-    },
-    {
-      "name": "Fuck You",
-      "description": "fggefge",
-      "userId": 2,
-      "id": 12
     }
   ]
 }

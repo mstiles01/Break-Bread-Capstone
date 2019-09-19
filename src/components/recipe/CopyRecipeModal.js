@@ -8,10 +8,13 @@ class CopyRecipeModal extends Component {
             modal: false,
             activeUserId: parseInt(sessionStorage.getItem("credentials")),
             newRecipeId: 0,
-            recipes: []
+            recipes: [],
+            bookList: [],
+            recipeBookId: ""
         }
 
         this.toggle = this.toggle.bind(this);
+        this.changeUnmountOnClose = this.changeUnmountOnClose.bind(this);
     }
 
     toggle() {
@@ -27,7 +30,8 @@ class CopyRecipeModal extends Component {
             name: this.props.recipes.name,
             userId: this.state.activeUserId,
             type: this.props.recipes.type,
-            ingredients: this.props.recipes.ingredients
+            ingredients: this.props.recipes.ingredients,
+            recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
 
         }
 
@@ -50,6 +54,7 @@ class CopyRecipeModal extends Component {
                 name: recipes.name,
                 type: recipes.type,
                 ingredients: recipes.ingredients,
+                recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
                 isComplete: false
             }
 
@@ -59,6 +64,11 @@ class CopyRecipeModal extends Component {
         // map over the new resources and post to the database
         newRecipeDetails.map(newRecipeDetail => this.props.copyRecipe(newRecipeDetail));
     }
+    changeUnmountOnClose(e) {
+        let value = e.target.value;
+        this.setState({ unmountOnClose: JSON.parse(value) });
+      }
+
 
     render() {
             return (
@@ -69,10 +79,21 @@ class CopyRecipeModal extends Component {
                     <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                         <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
                         <ModalBody>
-                            Are you sure you want to copy this recipe?
+                        <select
+              name="recipeBookId"
+              id="recipeBookId"
+              onChange={this.handleFieldChange}
+            >
+              <option value="">Select Recipe Book</option>
+              {this.props.bookList.map(book => (
+                <option key={book.recipeBookId}  value={book.recipeBookID}>
+                  {book.name}
+                </option>
+              ))}
+            </select>
                     </ModalBody>
                         <ModalFooter>
-                            <Button onClick={this.handleSubmit} color="success">Yes</Button>
+                            <Button onClick={this.handleSubmit}  color="success">Yes</Button>
                             <Button onClick={this.toggle} color="success">No</Button>
                         </ModalFooter>
                     </Modal>
