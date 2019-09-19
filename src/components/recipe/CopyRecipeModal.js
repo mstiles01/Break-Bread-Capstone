@@ -31,7 +31,7 @@ class CopyRecipeModal extends Component {
             userId: this.state.activeUserId,
             type: this.props.recipes.type,
             ingredients: this.props.recipes.ingredients,
-            recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+           recipeBookId: this.props.bookList.id
 
         }
 
