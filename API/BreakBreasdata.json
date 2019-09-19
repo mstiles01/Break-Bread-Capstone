@@ -45,26 +45,33 @@
       "ingredients": "dasfdfs",
       "recipeBookId": 2,
       "id": 2
-    }
-  ],
-  "recipeBooks": [
-    {
-      "name": "Hello!",
-      "description": "Hello!",
-      "userId": 2,
-      "id": 1
     },
     {
-      "name": "kmm",
-      "description": "kmnknkn",
-      "userId": 2,
-      "id": 2
+      "name": "ADSF",
+      "type": "DSAF",
+      "ingredients": "DASF",
+      "recipeBookId": 2,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "XZCVFADSF",
+      "type": "CVADV",
+      "ingredients": "DSAFDSF",
+      "recipeBookId": 4,
+      "userId": 1,
+      "id": 4
     },
     {
       "name": "Test this b",
-      "description": "Test",
-      "userId": 2,
-      "id": 3
+      "userId": 1,
+      "type": "hahaha",
+      "ingredients": "dasfdfs",
+      "recipeBookId": 4,
+      "id": 5
     }
+  ],
+  "recipeBooks": [
+    
   ]
 }
