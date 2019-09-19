@@ -17,7 +17,6 @@ class recipeAddModal extends React.Component {
       name: "",
       type: "",
       ingredients: "",
-      recipeBookId: "",
       loadingStatus: false
       // put properties here
     };

@@ -31,18 +31,12 @@
   ],
   "recipes": [
     {
-      "name": "turd boy",
-      "userId": 2,
-      "type": "turd boy",
-      "ingredients": "turd boy",
-      "id": 21
-    },
-    {
-      "name": "turd boy",
-      "userId": 2,
-      "type": "turd boy",
-      "ingredients": "turd boy",
-      "id": 22
+      "name": "Test",
+      "type": "Test",
+      "ingredients": "Test",
+      "recipeBookId": 11,
+      "userId": 4,
+      "id": 1
     }
   ],
   "recipeBooks": [
