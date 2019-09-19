@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RecipeManager from '.././modules/RecipeManager';
 import EditRecipeModal from './EditRecipeModal'
+import BookListManager from '../modules/RecipeBookManager'
 
 class RecipeDetail extends Component {
     state = {
@@ -10,6 +11,7 @@ class RecipeDetail extends Component {
         ingredients: "",
         id: "",
         recipeBookId: "",
+        bookList: [],
         loadingStatus: true,
     }
 
@@ -23,10 +25,21 @@ class RecipeDetail extends Component {
                 ingredients: recipe.ingredients,
                 id: recipe.id,
                 bookId: recipe.recipeBookId,
+                bookList: [],
                 loadingStatus: false
             });
         });
+        this.getBookList()
     }
+
+    getBookList() {
+        BookListManager.getAllBooks()
+          .then((bookList) => {
+            this.setState({
+              bookList: bookList
+            })
+          })
+      }
 
     handleDelete = () => {
         this.setState({loadingStatus: true})
@@ -56,8 +69,8 @@ class RecipeDetail extends Component {
                 <p>Type: {this.state.type}</p>
                 <p>Ingredients: {this.state.ingredients}</p>
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Toss this out</button>
-                <EditRecipeModal {...this.props}
-                editRecipe={this.editRecipe} />{" "}
+                <EditRecipeModal bookList={this.state.bookList} {...this.props}
+                editRecipe={this.editRecipe}  />{" "}
             </div>
           </div>
         );

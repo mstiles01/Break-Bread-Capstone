@@ -16,7 +16,9 @@ class recipeAddModal extends React.Component {
       unmountOnClose: true,
       name: "",
       type: "",
+      recipeBookId: "",
       ingredients: "",
+      bookList: [],
       loadingStatus: false
       // put properties here
     };
@@ -38,7 +40,7 @@ class recipeAddModal extends React.Component {
         name: this.state.name,
         type: this.state.type,
         ingredients: this.state.ingredients,
-        recipeBookId: this.props.bookId,
+        recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
         userId: this.props.activeUser()
       };
       this.props.addNewRecipe(recipes).then(() => this.toggle());
@@ -93,14 +95,13 @@ class recipeAddModal extends React.Component {
             />
 
             <select
-              defaultValue=""
               name="RecipeBookId"
-              id="RecipeBookDropDown"
+              id="recipeBookId"
               onChange={this.handleFieldChange}
             >
               <option value="">Select Recipe Book</option>
               {this.props.bookList.map(book => (
-                <option key={book.recipeBookId} id={book.recipeBookId} value={book.recipeBookId}>
+                <option key={book.recipeBookId}  value={book.recipeBookID}>
                   {book.name}
                 </option>
               ))}

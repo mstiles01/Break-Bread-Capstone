@@ -22,6 +22,7 @@ class EditRecipeModal extends React.Component {
         name: "",
         type: "",
         ingredients: "",
+        bookList: [],
         loadingStatus: false
       };
       // toggle from reactstrap
@@ -51,6 +52,7 @@ class EditRecipeModal extends React.Component {
         type: recipes.type,
         ingredients: recipes.ingredients,
         userId: recipes.userId,
+        recipeBookId: this.props.bookId,
         id: recipes.id
       });
     });
@@ -66,7 +68,8 @@ class EditRecipeModal extends React.Component {
       type: this.state.type,
       ingredients: this.state.ingredients,
       userId: this.state.userId,
-      id: this.props.recipeId
+      id: this.props.recipeId,
+      recipeBookId: this.props.bookId
     };
 
     // invokes editEvent function from EvenList.js, passes edited object and the id, and then closes modal
@@ -126,16 +129,23 @@ class EditRecipeModal extends React.Component {
             />
             <Input
               id="ingredients"
-              type="text"
+              type="textarea"
               onChange={this.handleFieldChange}
               value={this.state.ingredients}
             />
-             <select>
-              <option placeholder="Select Recipe Book" value="">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-              </select>
+             <select
+              defaultValue=""
+              name="RecipeBookId"
+              id="RecipeBookDropDown"
+              onChange={this.handleFieldChange}
+            >
+              <option value="">Select Recipe Book</option>
+              {this.props.bookList.map(book => (
+                <option key={book.name} id={book.name} value={book.name}>
+                  {book.name}
+                </option>
+              ))}
+            </select>
           </ModalBody>
           <ModalFooter>
             {/* put buttons */}

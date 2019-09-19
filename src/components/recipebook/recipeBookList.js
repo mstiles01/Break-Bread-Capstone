@@ -53,6 +53,18 @@ class RecipeBookList extends Component {
     })
    }
 
+   copiedRecipeState = (obj) => {
+    this.setState({
+      copiedRecipeList: obj
+    })
+  }
+
+  copyRecipe = (RecipeObj) => {
+    console.log(RecipeObj)
+    return RecipeManager.postRecipe(RecipeObj)
+  }
+
+
    render() {
     return (
       <React.Fragment>
@@ -64,7 +76,8 @@ class RecipeBookList extends Component {
             <RecipeCard
               key={recipes.id}
               recipes={recipes}
-              editRecipe={this.editRecipe}
+              copyRecipe={this.copyRecipe}
+              copiedRecipeState={this.copiedRecipeState}
               deleteRecipe={this.deleteRecipe}
               {...this.props}
             />
