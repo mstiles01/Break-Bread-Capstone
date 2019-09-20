@@ -34,9 +34,9 @@
       "name": "1",
       "type": "1",
       "ingredients": "1",
-      "recipeBookId": 1,
       "userId": 2,
-      "id": 1
+      "id": 1,
+      "activeUserId": 2
     },
     {
       "name": "1",

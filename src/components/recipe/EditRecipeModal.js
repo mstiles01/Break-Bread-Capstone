@@ -61,7 +61,12 @@ class EditRecipeModal extends React.Component {
 
   // function that updates an existing event
   updateExistingRecipe = evt => {
+    
     evt.preventDefault(); // stops evt?
+    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "") {
+    window.alert("Please fill out the form right, idiot head.");
+    }
+    else {
     this.setState({ loadingStatus: true });
     const editedRecipe = {
       // creates edited event object with the values that we type in inputs
@@ -74,10 +79,12 @@ class EditRecipeModal extends React.Component {
       recipeBookId: this.props.bookId
     };
 
+
     // invokes editEvent function from EvenList.js, passes edited object and the id, and then closes modal
     this.props
       .editRecipe(editedRecipe, this.props.recipeId)
       .then(() => this.toggle());
+  }
   };
 
   // toggle function that opens/closes modal from ReactStrap

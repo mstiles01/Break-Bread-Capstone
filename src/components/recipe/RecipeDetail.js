@@ -43,10 +43,9 @@ class RecipeDetail extends Component {
           })
       }
 
-    handleDelete = () => {
+    recipePushBack = () => {
         this.setState({loadingStatus: true})
-        RecipeManager.deleteRecipe(this.props.recipeID)
-        .then(() => this.props.history.push("/recipes"))
+        this.props.history.push("/recipes")
     }
 
     editRecipe = (obj, id) => {
@@ -79,7 +78,7 @@ class RecipeDetail extends Component {
                 <p>Ingredients: {this.state.ingredients}</p>
                 { checkUser ?
                 <div className="EditRecBTN">
-                <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Back to recipes</button>
+                <button type="button" disabled={this.state.loadingStatus} onClick={this.recipePushBack}>Back to Recipe</button>
                 <EditRecipeModal bookList={this.state.bookList} {...this.props}
                 editRecipe={this.editRecipe} /> {" "}
                   </div>

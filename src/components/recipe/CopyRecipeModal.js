@@ -47,7 +47,11 @@ class CopyRecipeModal extends Component {
     }
 
     cloneResources = (recipeId) => {
-
+        if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "") {
+            window.alert("Please fill out the form right, idiot head.");
+            }
+            else {
+            this.setState({ loadingStatus: true });
         const newRecipeDetails = this.state.recipes.map(recipes => {
             // create resource object with the new skillId
             const newRecipeDetail = {
@@ -58,14 +62,17 @@ class CopyRecipeModal extends Component {
                 ingredients: recipes.ingredients,
                 recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
                 isComplete: false
-            }
 
+            }
             return newRecipeDetail;
+
         })
+
 
         // map over the new resources and post to the database
         newRecipeDetails.map(newRecipeDetail => this.props.copyRecipe(newRecipeDetail));
     }
+}
 
     handleFieldChange = evt => {
         const stateToChange = {};
