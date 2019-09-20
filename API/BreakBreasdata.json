@@ -45,6 +45,14 @@
       "ingredients": "1",
       "recipeBookId": 2,
       "id": 2
+    },
+    {
+      "name": "hey youre sdugu",
+      "type": "hey youre sdugu",
+      "ingredients": "hey youre sdugu",
+      "recipeBookId": 3,
+      "userId": 2,
+      "id": 3
     }
   ],
   "recipeBooks": [
@@ -59,6 +67,12 @@
       "description": "Test",
       "userId": 1,
       "id": 2
+    },
+    {
+      "name": "dumb",
+      "description": "dumb",
+      "userId": 2,
+      "id": 3
     }
   ]
 }

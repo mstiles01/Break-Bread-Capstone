@@ -27,7 +27,6 @@ class RecipeDetail extends Component {
                 ingredients: recipe.ingredients,
                 id: recipe.id,
                 bookId: recipe.recipeBookId,
-                bookList: [],
                 userId: recipe.userId,
                 loadingStatus: false
             });
