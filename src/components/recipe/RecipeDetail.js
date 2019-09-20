@@ -13,6 +13,7 @@ class RecipeDetail extends Component {
         recipeBookId: "",
         bookList: [],
         userId: 0,
+        activeUserId: parseInt(sessionStorage.getItem("credentials")),
         loadingStatus: true,
     }
 
@@ -26,7 +27,6 @@ class RecipeDetail extends Component {
                 ingredients: recipe.ingredients,
                 id: recipe.id,
                 bookId: recipe.recipeBookId,
-                bookList: [],
                 userId: recipe.userId,
                 loadingStatus: false
             });
@@ -58,6 +58,7 @@ class RecipeDetail extends Component {
                 ingredients: recipe.ingredients,
                 id: recipe.id,
                 bookId: recipe.recipeBookId,
+                activeUserId: parseInt(sessionStorage.getItem("credentials")),
                 loadingStatus: false
             });
         });
@@ -66,8 +67,7 @@ class RecipeDetail extends Component {
     render() {
       const activeUser = parseInt(sessionStorage.getItem("credentials"))
       const checkUser = this.state.userId === activeUser
-        console.log("turd nugget", activeUser)
-        console.log("hello", this.state.userId)
+
       return (
 
 
@@ -78,7 +78,7 @@ class RecipeDetail extends Component {
                 <p>Type: {this.state.type}</p>
                 <p>Ingredients: {this.state.ingredients}</p>
                 { checkUser ?
-                <div classname="EditRecBTN">
+                <div className="EditRecBTN">
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Back to recipes</button>
                 <EditRecipeModal bookList={this.state.bookList} {...this.props}
                 editRecipe={this.editRecipe} /> {" "}

@@ -23,6 +23,7 @@ class EditRecipeModal extends React.Component {
         type: "",
         ingredients: "",
         bookList: [],
+        activeUserId: parseInt(sessionStorage.getItem("credentials")),
         loadingStatus: false
       };
       // toggle from reactstrap
@@ -69,6 +70,7 @@ class EditRecipeModal extends React.Component {
       ingredients: this.state.ingredients,
       userId: this.state.userId,
       id: this.props.recipeId,
+      activeUserId: this.state.activeUserId,
       recipeBookId: this.props.bookId
     };
 
@@ -93,6 +95,9 @@ class EditRecipeModal extends React.Component {
 
   // render function. most JSX came from ReactStrap
   render() {
+    const activeUser = parseInt(sessionStorage.getItem("credentials"))
+
+
     return (
       // div containing the modal. probably needs a class and/or id
       <div>
@@ -140,10 +145,10 @@ class EditRecipeModal extends React.Component {
               onChange={this.handleFieldChange}
             >
               <option value="">Select Recipe Book</option>
-              {this.props.bookList.map(book => (
+              {this.props.bookList.map(book => (book.userId === activeUser ?
                 <option key={book.name} id={book.name} value={book.name}>
                   {book.name}
-                </option>
+                </option> : null
               ))}
             </select>
           </ModalBody>

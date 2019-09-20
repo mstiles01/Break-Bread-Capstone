@@ -19,6 +19,7 @@ class recipeAddModal extends React.Component {
       recipeBookId: "",
       ingredients: "",
       bookList: [],
+      userId: 0,
       loadingStatus: false
       // put properties here
     };
@@ -57,6 +58,7 @@ class recipeAddModal extends React.Component {
   }
   // put functionality here  example:handle field change
   render() {
+
     return (
       <div>
         <Form inline onSubmit={e => e.preventDefault()}>
@@ -92,20 +94,23 @@ class recipeAddModal extends React.Component {
               onChange={this.handleFieldChange}
               placeholder="Add Ingredients"
 
+
             />
 
             <select
               name="RecipeBookId"
               id="recipeBookId"
-              onChange={this.handleFieldChange}
-            >
+              onChange={this.handleFieldChange}>
               <option value="">Select Recipe Book</option>
-              {this.props.bookList.map(book => (
-                <option key={book.recipeBookId}  value={book.recipeBookID}>
+              {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
+                <option Bookkey={book.recipeBookId} value={book.recipeBookID}>
                   {book.name}
-                </option>
+                </option> : null
               ))}
+
+
             </select>
+
 
           </ModalBody>
           <ModalFooter>
@@ -120,6 +125,8 @@ class recipeAddModal extends React.Component {
         </Modal>
       </div>
     );
+
   }
 }
+
 export default recipeAddModal;
