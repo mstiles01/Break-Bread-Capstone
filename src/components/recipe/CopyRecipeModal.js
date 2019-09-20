@@ -10,7 +10,8 @@ class CopyRecipeModal extends Component {
             newRecipeId: 0,
             recipes: [],
             bookList: [],
-            recipeBookId: ""
+            recipeBookId: "",
+            userId: ""
         }
 
         this.toggle = this.toggle.bind(this);
@@ -32,6 +33,7 @@ class CopyRecipeModal extends Component {
             type: this.props.recipes.type,
             ingredients: this.props.recipes.ingredients,
             recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+
 
         }
 
@@ -72,6 +74,8 @@ class CopyRecipeModal extends Component {
     };
 
     render() {
+        
+
         return (
             <>
                 <Button onClick={this.toggle} color="success">
@@ -84,12 +88,15 @@ class CopyRecipeModal extends Component {
                             name="RecipeBookId"
                             id="recipeBookId"
                             onChange={this.handleFieldChange} >
+
                             <option value="">Select Recipe Book</option>
-                            {this.props.bookList.map(book => (
+                            {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
                                 <option key={book.recipeBookId} value={book.recipeBookID}>
                                     {book.name}
-                                </option>
+                                </option> : null
+
                             ))}
+
                         </select>
                     </ModalBody>
                     <ModalFooter>

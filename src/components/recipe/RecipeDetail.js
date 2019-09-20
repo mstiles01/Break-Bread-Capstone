@@ -13,6 +13,7 @@ class RecipeDetail extends Component {
         recipeBookId: "",
         bookList: [],
         userId: 0,
+        activeUserId: parseInt(sessionStorage.getItem("credentials")),
         loadingStatus: true,
     }
 
@@ -58,6 +59,7 @@ class RecipeDetail extends Component {
                 ingredients: recipe.ingredients,
                 id: recipe.id,
                 bookId: recipe.recipeBookId,
+                activeUserId: parseInt(sessionStorage.getItem("credentials")),
                 loadingStatus: false
             });
         });
@@ -66,7 +68,7 @@ class RecipeDetail extends Component {
     render() {
       const activeUser = parseInt(sessionStorage.getItem("credentials"))
       const checkUser = this.state.userId === activeUser
-    
+
       return (
 
 

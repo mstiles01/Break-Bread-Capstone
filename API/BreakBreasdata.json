@@ -31,28 +31,20 @@
   ],
   "recipes": [
     {
-      "name": "Hello",
-      "type": "hello",
-      "ingredients": "hekki",
+      "name": "1",
+      "type": "1",
+      "ingredients": "1",
       "recipeBookId": 1,
-      "userId": 1,
+      "userId": 2,
       "id": 1
     },
     {
-      "name": "Test this b",
-      "type": "hahaha",
-      "ingredients": "dasfdfs",
-      "recipeBookId": 1,
+      "name": "1",
       "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "Hello",
-      "userId": 1,
-      "type": "hello",
-      "ingredients": "hekki",
-      "recipeBookId": 1,
-      "id": 4
+      "type": "1",
+      "ingredients": "1",
+      "recipeBookId": 2,
+      "id": 2
     }
   ],
   "recipeBooks": [
