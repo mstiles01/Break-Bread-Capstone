@@ -30,89 +30,20 @@
     }
   ],
   "recipes": [
-    {
-      "name": "1",
-      "userId": 1,
-      "type": "1",
-      "ingredients": "1",
-      "recipeBookId": 2,
-      "id": 2
-    },
-    {
-      "name": "rereretestrererere",
-      "type": "2",
-      "ingredients": "22222",
-      "userId": 2,
-      "id": 3,
-      "activeUserId": 2
-    },
-    {
-      "name": "Retest",
-      "type": "Retest",
-      "ingredients": "Retest",
-      "userId": 2,
-      "id": 4,
-      "activeUserId": 2
-    },
-    {
-      "name": "testing",
-      "type": "testing",
-      "ingredients": "testing",
-      "recipeBookId": "3",
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "name": "test",
-      "type": "test",
-      "ingredients": "test",
-      "recipeBookId": "1",
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "name": "2",
-      "type": "2",
-      "ingredients": "2",
-      "recipeBookId": "1",
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "name": "3",
-      "type": "2",
-      "ingredients": "2",
-      "recipeBookId": "1",
-      "userId": 2,
-      "id": 8
-    },
-    {
-      "name": "45",
-      "type": "3",
-      "ingredients": "3",
-      "recipeBookId": "1",
-      "userId": 2,
-      "id": 9
-    }
+   
   ],
   "recipeBooks": [
     {
-      "name": "Michael Stiles Test",
-      "description": "I love Star Wars, here are recipes that support that claim",
+      "name": "Hello!",
+      "description": "Hello!",
       "userId": 2,
       "id": 1
     },
     {
-      "name": "Test this b",
-      "description": "Test",
+      "name": "This is test 2",
+      "description": "This is test 2",
       "userId": 1,
       "id": 2
-    },
-    {
-      "name": "dumb",
-      "description": "dumb",
-      "userId": 2,
-      "id": 3
     }
   ]
 }

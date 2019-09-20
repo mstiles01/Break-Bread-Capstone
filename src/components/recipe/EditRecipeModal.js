@@ -63,7 +63,7 @@ class EditRecipeModal extends React.Component {
   updateExistingRecipe = evt => {
 
     evt.preventDefault(); // stops evt?
-    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "") {
+    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
     window.alert("Please fill out the form right, idiot head.");
     }
     else {
@@ -76,7 +76,8 @@ class EditRecipeModal extends React.Component {
       userId: this.state.userId,
       id: this.props.recipeId,
       activeUserId: this.state.activeUserId,
-      recipeBookId: this.props.bookId
+      recipeBookId: this.props.bookId,
+      recipeBookId: this.state.recipeBookId
     };
 
 
@@ -151,10 +152,10 @@ class EditRecipeModal extends React.Component {
               id="RecipeBookDropDown"
               onChange={this.handleFieldChange}
             >
-              <option>Please Select Book</option>
+              <option value="">Please Select Book</option>
 
               {this.props.bookList.map(book => (book.userId === activeUser ?
-                <option key={book.name} id={book.name} value={book.name} name={book.recipeBookId}>
+                <option key={book.name} id={book.name} value={book.name} name={book.name}>
                   {book.name}
                 </option> : null
               ))}
