@@ -103,7 +103,7 @@ class recipeAddModal extends React.Component {
               onChange={this.handleFieldChange}>
               <option value="">Select Recipe Book</option>
               {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
-                <option Bookkey={book.recipeBookId} value={book.recipeBookID}>
+                <option key={Math.random()} value={book.recipeBookID}>
                   {book.name}
                 </option> : null
               ))}

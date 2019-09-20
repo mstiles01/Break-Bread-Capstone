@@ -53,9 +53,9 @@ class BookList extends Component {
 
           {this.state.recipeBooks.map(recipeBook => (
           recipeBook.userId === this.props.activeUser() ?
-             <div className="cards__container">
+             <div className="Bookcard__container" key={recipeBook.id}>
             <BookCard
-              key={recipeBook.id}
+
               recipeBooks={recipeBook}
               editRecipeBook={this.editRecipeBook}
               deleteRecipeBook={this.deleteRecipeBook}
