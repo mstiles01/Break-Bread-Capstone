@@ -78,7 +78,7 @@ class RecipeDetail extends Component {
                 <p>Type: {this.state.type}</p>
                 <p>Ingredients: {this.state.ingredients}</p>
                 { checkUser ?
-                <div classname="EditRecBTN">
+                <div className="EditRecBTN">
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Back to recipes</button>
                 <EditRecipeModal bookList={this.state.bookList} {...this.props}
                 editRecipe={this.editRecipe} /> {" "}
