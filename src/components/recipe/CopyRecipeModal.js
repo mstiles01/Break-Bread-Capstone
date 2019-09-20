@@ -32,7 +32,7 @@ class CopyRecipeModal extends Component {
             userId: this.state.activeUserId,
             type: this.props.recipes.type,
             ingredients: this.props.recipes.ingredients,
-            recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+            recipeBookId: this.state.recipeBookId
 
 
         }
@@ -47,11 +47,6 @@ class CopyRecipeModal extends Component {
     }
 
     cloneResources = (recipeId) => {
-        if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "") {
-            window.alert("Please fill out the form right, idiot head.");
-            }
-            else {
-            this.setState({ loadingStatus: true });
         const newRecipeDetails = this.state.recipes.map(recipes => {
             // create resource object with the new skillId
             const newRecipeDetail = {
@@ -60,19 +55,16 @@ class CopyRecipeModal extends Component {
                 name: recipes.name,
                 type: recipes.type,
                 ingredients: recipes.ingredients,
-                recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+                recipeBookId: this.state.recipeBookId,
                 isComplete: false
-
             }
+
             return newRecipeDetail;
-
         })
-
 
         // map over the new resources and post to the database
         newRecipeDetails.map(newRecipeDetail => this.props.copyRecipe(newRecipeDetail));
     }
-}
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -95,10 +87,10 @@ class CopyRecipeModal extends Component {
                             name="RecipeBookId"
                             id="recipeBookId"
                             onChange={this.handleFieldChange} >
+                                <option>Please Select Book</option>
 
-                            <option value="">Select Recipe Book</option>
                             {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
-                                <option key={Math.random()} value={book.recipeBookID}>
+                                <option key={book.id} value={book.id} name={book.name}>
                                     {book.name}
                                 </option> : null
 

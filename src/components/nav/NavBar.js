@@ -21,7 +21,7 @@ class NavBar extends Component {
         return (
             <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
               <ul className="nav nav-pills nav-fill">
-                
+
                   <li className="nav-item">
                       <Link className="nav-link" to="/BookList">
                           Recipe Book
@@ -39,7 +39,7 @@ class NavBar extends Component {
                       </li>
                       <li className="nav-item">
                         <Link className="nav-link" to="/">
-                        <Button onClick={this.logoutUser}>Logout</Button>
+                        <Button onClick={this.logout}>Logout</Button>
                         </Link>
                       </li>
 
