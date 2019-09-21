@@ -47,6 +47,10 @@ class RecipeDetail extends Component {
         this.setState({loadingStatus: true})
         this.props.history.push("/recipes")
     }
+    bookPushBack = () => {
+        this.setState({loadingStatus: true})
+        this.props.history.push("/BookList")
+    }
 
     editRecipe = (obj, id) => {
         return RecipeManager.editRecipe(obj, id)
@@ -79,6 +83,7 @@ class RecipeDetail extends Component {
                 { checkUser ?
                 <div className="EditRecBTN">
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.recipePushBack}>Back to Recipe</button>
+                <button type="button" disabled={this.state.loadingStatus} onClick={this.bookPushBack}>Back to Recipe Books</button>
                 <EditRecipeModal bookList={this.state.bookList} {...this.props}
                 editRecipe={this.editRecipe} /> {" "}
                   </div>

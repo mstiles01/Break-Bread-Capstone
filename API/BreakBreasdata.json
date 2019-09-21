@@ -17,13 +17,13 @@
   ],
   "recipes": [
     {
-      "name": "Hello Joe",
-      "type": "Hello Joe",
+      "name": "Hello Joesph",
+      "type": "Hello boi",
       "ingredients": "Hey boi",
       "userId": 2,
       "id": 2,
       "activeUserId": 2,
-      "recipeBookId": "1"
+      "recipeBookId": "3"
     },
     {
       "name": "Hello",
@@ -42,12 +42,31 @@
       "id": 4
     },
     {
-      "name": "1",
-      "userId": 2,
+      "name": "Copy Test",
       "type": "1",
       "ingredients": "1",
-      "recipeBookId": "1",
-      "id": 5
+      "userId": 2,
+      "id": 5,
+      "activeUserId": 2,
+      "recipeBookId": "2"
+    },
+    {
+      "name": "1",
+      "type": "1",
+      "ingredients": "23",
+      "userId": 2,
+      "id": 6,
+      "activeUserId": 2,
+      "recipeBookId": "2"
+    },
+    {
+      "name": "1",
+      "type": "1",
+      "ingredients": "1",
+      "userId": 2,
+      "id": 7,
+      "activeUserId": 2,
+      "recipeBookId": "2"
     }
   ],
   "recipeBooks": [
