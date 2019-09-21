@@ -24,8 +24,10 @@ class CopyRecipeModal extends Component {
 
 
     handleSubmit = () => {
-
-
+        if(this.state.recipeBookId === "") {
+            window.alert("Please Select A Recipe Book");
+        }
+        else{
         // create object for the copied skill with activeUser's id
         const newRecipeCard = {
             name: this.props.recipes.name,
@@ -44,6 +46,7 @@ class CopyRecipeModal extends Component {
                 this.cloneResources(postedRecipe.id)
                 this.props.copiedRecipeState(postedRecipe)
             }).then(this.toggle);
+        }
     }
 
     cloneResources = (recipeId) => {
@@ -84,13 +87,13 @@ class CopyRecipeModal extends Component {
                     <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
                     <ModalBody>
                         <select
-                            name="RecipeBookId"
+                            name="recipeBookId"
                             id="recipeBookId"
                             onChange={this.handleFieldChange} >
-                                <option>Please Select Book</option>
+                                <option value="">Please Select Book</option>
 
                             {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
-                                <option key={book.id} value={book.id} name={book.name}>
+                                <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                                     {book.name}
                                 </option> : null
 

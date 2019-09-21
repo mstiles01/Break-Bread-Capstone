@@ -13,37 +13,67 @@
       "email": "mstiles01@icloud.com",
       "password": "1234",
       "id": 2
-    },
-    {
-      "bio": "Hellow",
-      "username": "MichaelIsmydad",
-      "email": "h1@abc.com",
-      "password": "1",
-      "id": 3
-    },
-    {
-      "bio": "Hello! I am Turd BoI!",
-      "username": "turdboi",
-      "email": "turd@turd.com",
-      "password": "1234",
-      "id": 4
     }
   ],
   "recipes": [
-   
+    {
+      "name": "Hello Joe",
+      "type": "Hello Joe",
+      "ingredients": "Hey boi",
+      "userId": 2,
+      "id": 2,
+      "activeUserId": 2,
+      "recipeBookId": "1"
+    },
+    {
+      "name": "Hello",
+      "type": "Hello",
+      "ingredients": "Hello",
+      "recipeBookId": "3",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "name": "1",
+      "type": "1",
+      "ingredients": "1",
+      "recipeBookId": "4",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "1",
+      "userId": 2,
+      "type": "1",
+      "ingredients": "1",
+      "recipeBookId": "1",
+      "id": 5
+    }
   ],
   "recipeBooks": [
     {
-      "name": "Hello!",
-      "description": "Hello!",
+      "name": "d",
+      "description": "d",
       "userId": 2,
       "id": 1
     },
     {
-      "name": "This is test 2",
-      "description": "This is test 2",
-      "userId": 1,
+      "name": "Test",
+      "description": "Test",
+      "userId": 2,
       "id": 2
+    },
+    {
+      "name": "Hello",
+      "description": "Hello",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "name": "Test 2",
+      "description": "Test 2",
+      "userId": 1,
+      "id": 4
     }
   ]
 }

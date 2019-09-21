@@ -101,10 +101,9 @@ class recipeAddModal extends React.Component {
               name="RecipeBookId"
               id="recipeBookId"
               onChange={this.handleFieldChange}>
-                <option>PLease select</option>
+                <option value="">Please select</option>
               {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
-                <option  key={book.id} value={book.id}  name={book.name} >
-
+                <option  key={book.id} value={book.id} name={book.name} >
                   {book.name}
                 </option> : null
               ))}

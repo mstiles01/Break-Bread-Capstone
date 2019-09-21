@@ -46,6 +46,7 @@ class BookList extends Component {
     // const checkUser = this.state.recipeBooks.userId === this.props.activeUser()
     return (
       <React.Fragment>
+         <div><h1>Book List</h1></div>
         <section className="button__container">
           <AddBookModal addNewRecipeBook={this.addNewRecipeBook} {...this.props} />
         </section>

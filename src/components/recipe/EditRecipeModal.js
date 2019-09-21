@@ -22,6 +22,7 @@ class EditRecipeModal extends React.Component {
         name: "",
         type: "",
         ingredients: "",
+        recipeBookId: "",
         bookList: [],
         activeUserId: parseInt(sessionStorage.getItem("credentials")),
         loadingStatus: false
@@ -53,7 +54,7 @@ class EditRecipeModal extends React.Component {
         type: recipes.type,
         ingredients: recipes.ingredients,
         userId: recipes.userId,
-        recipeBookId: this.props.bookId,
+        recipeBookId: this.state.recipeBookId,
         id: recipes.id
       });
     });
@@ -76,8 +77,8 @@ class EditRecipeModal extends React.Component {
       userId: this.state.userId,
       id: this.props.recipeId,
       activeUserId: this.state.activeUserId,
-      recipeBookId: this.props.bookId,
       recipeBookId: this.state.recipeBookId
+
     };
 
 
@@ -108,6 +109,8 @@ class EditRecipeModal extends React.Component {
 
     return (
       // div containing the modal. probably needs a class and/or id
+
+
       <div>
         {/* form for adding an event button */}
         <Form inline onSubmit={e => e.preventDefault()}>
@@ -149,13 +152,12 @@ class EditRecipeModal extends React.Component {
              <select
               defaultValue=""
               name="RecipeBookId"
-              id="RecipeBookDropDown"
+              id="recipeBookId"
               onChange={this.handleFieldChange}
             >
               <option value="">Please Select Book</option>
-
               {this.props.bookList.map(book => (book.userId === activeUser ?
-                <option key={book.name} id={book.name} value={book.name} name={book.name}>
+                <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                   {book.name}
                 </option> : null
               ))}
@@ -172,9 +174,12 @@ class EditRecipeModal extends React.Component {
           </ModalFooter>
         </Modal>
       </div>
+
     );
   }
+
 }
+
 
 export default EditRecipeModal;
 

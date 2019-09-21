@@ -65,6 +65,7 @@ class RecipeList extends Component {
   render() {
     return (
       <React.Fragment>
+         <div><h1>Community Recipe List</h1></div>
         <section className="button__container">
           <AddRecipeModal addNewRecipe={this.addNewRecipe} bookList={this.state.bookList} {...this.props} />
         </section>
