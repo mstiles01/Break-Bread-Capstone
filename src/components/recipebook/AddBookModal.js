@@ -1,4 +1,5 @@
 import React from "react";
+import RecipeBookManager from '../modules/RecipeBookManager'
 import {
   Button,
   Modal,
@@ -38,7 +39,7 @@ class addBookModal extends React.Component {
         description: this.state.description,
         userId: this.props.activeUser()
       };
-      this.props.addNewRecipeBook(recipeBooks).then(() => this.toggle());
+      this.props.addNewBook(recipeBooks).then(() => this.toggle());
     }
   };
   toggle() {
@@ -50,6 +51,16 @@ class addBookModal extends React.Component {
     let value = e.target.value;
     this.setState({ unmountOnClose: JSON.parse(value) });
   }
+
+  addNewBook = obj => {
+    return RecipeBookManager.postBook(obj).then(() => {
+      RecipeBookManager.getAllBooks(this.props.activeUser()).then(books => {
+            this.setState({
+              books: books
+            });
+        });
+    });
+}
   // put functionality here  example:handle field change
   render() {
     return (

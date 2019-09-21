@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import RecipeBookManager from '../modules/RecipeBookManager'
+import AddBookModal from '../recipebook/AddBookModal'
+
 
 class CopyRecipeModal extends Component {
     constructor(props) {
@@ -28,7 +31,7 @@ class CopyRecipeModal extends Component {
             window.alert("Please Select A Recipe Book");
         }
         else{
-        // create object for the copied skill with activeUser's id
+        // create object for the copied recipe with activeUser's id
         const newRecipeCard = {
             name: this.props.recipes.name,
             userId: this.state.activeUserId,
@@ -75,6 +78,16 @@ class CopyRecipeModal extends Component {
         this.setState(stateToChange);
     };
 
+    addNewBook = obj => {
+        return RecipeBookManager.postBook(obj).then(() => {
+          RecipeBookManager.getAllBooks(this.props.activeUser()).then(books => {
+                this.setState({
+                  books: books
+                });
+            });
+        });
+    }
+
     render() {
 
 
@@ -86,6 +99,9 @@ class CopyRecipeModal extends Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
                     <ModalBody>
+                    <section className="copy__addBook__modal">
+            <AddBookModal addNewBook={this.addNewBook} {...this.props}/>
+          </section>
                         <select
                             name="recipeBookId"
                             id="recipeBookId"
@@ -96,10 +112,9 @@ class CopyRecipeModal extends Component {
                                 <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                                     {book.name}
                                 </option> : null
-
                             ))}
-
                         </select>
+
                     </ModalBody>
                     <ModalFooter>
                         <Button onClick={this.handleSubmit} color="success">Yes</Button>
