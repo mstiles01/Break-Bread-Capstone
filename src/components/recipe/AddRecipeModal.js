@@ -33,7 +33,7 @@ class recipeAddModal extends React.Component {
   };
   constructNewRecipe = evt => {
     evt.preventDefault();
-    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "") {
+    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
       window.alert("Please fill out the form right, idiot head.");
     } else {
       this.setState({ loadingStatus: true });
@@ -41,7 +41,7 @@ class recipeAddModal extends React.Component {
         name: this.state.name,
         type: this.state.type,
         ingredients: this.state.ingredients,
-        recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+      recipeBookId: this.state.recipeBookId,
         userId: this.props.activeUser()
       };
       this.props.addNewRecipe(recipes).then(() => this.toggle());
@@ -101,9 +101,9 @@ class recipeAddModal extends React.Component {
               name="RecipeBookId"
               id="recipeBookId"
               onChange={this.handleFieldChange}>
-              <option value="">Select Recipe Book</option>
+                <option value="">Please select</option>
               {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
-                <option Bookkey={book.recipeBookId} value={book.recipeBookID}>
+                <option  key={book.id} value={book.id} name={book.name} >
                   {book.name}
                 </option> : null
               ))}

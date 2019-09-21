@@ -13,66 +13,86 @@
       "email": "mstiles01@icloud.com",
       "password": "1234",
       "id": 2
-    },
-    {
-      "bio": "Hellow",
-      "username": "MichaelIsmydad",
-      "email": "h1@abc.com",
-      "password": "1",
-      "id": 3
-    },
-    {
-      "bio": "Hello! I am Turd BoI!",
-      "username": "turdboi",
-      "email": "turd@turd.com",
-      "password": "1234",
-      "id": 4
     }
   ],
   "recipes": [
     {
-      "name": "1",
-      "type": "1",
-      "ingredients": "1",
-      "recipeBookId": 1,
+      "name": "Hello Joesph",
+      "type": "Hello boi",
+      "ingredients": "Hey boi",
       "userId": 2,
-      "id": 1
+      "id": 2,
+      "activeUserId": 2,
+      "recipeBookId": "3"
     },
     {
-      "name": "1",
-      "userId": 1,
-      "type": "1",
-      "ingredients": "1",
-      "recipeBookId": 2,
-      "id": 2
-    },
-    {
-      "name": "hey youre sdugu",
-      "type": "hey youre sdugu",
-      "ingredients": "hey youre sdugu",
-      "recipeBookId": 3,
+      "name": "Hello",
+      "type": "Hello",
+      "ingredients": "Hello",
+      "recipeBookId": "3",
       "userId": 2,
       "id": 3
+    },
+    {
+      "name": "1",
+      "type": "1",
+      "ingredients": "1",
+      "recipeBookId": "4",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "Copy Test",
+      "type": "1",
+      "ingredients": "1",
+      "userId": 2,
+      "id": 5,
+      "activeUserId": 2,
+      "recipeBookId": "2"
+    },
+    {
+      "name": "1",
+      "type": "1",
+      "ingredients": "23",
+      "userId": 2,
+      "id": 6,
+      "activeUserId": 2,
+      "recipeBookId": "2"
+    },
+    {
+      "name": "1",
+      "type": "1",
+      "ingredients": "1",
+      "userId": 2,
+      "id": 7,
+      "activeUserId": 2,
+      "recipeBookId": "2"
     }
   ],
   "recipeBooks": [
     {
-      "name": "Michael Stiles Test",
-      "description": "I love Star Wars, here are recipes that support that claim",
+      "name": "d",
+      "description": "d",
       "userId": 2,
       "id": 1
     },
     {
-      "name": "Test this b",
+      "name": "Test",
       "description": "Test",
-      "userId": 1,
+      "userId": 2,
       "id": 2
     },
     {
-      "name": "dumb",
-      "description": "dumb",
+      "name": "Hello",
+      "description": "Hello",
       "userId": 2,
       "id": 3
+    },
+    {
+      "name": "Test 2",
+      "description": "Test 2",
+      "userId": 1,
+      "id": 4
     }
   ]
 }

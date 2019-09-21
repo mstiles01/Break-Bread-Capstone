@@ -47,7 +47,6 @@ class EditBioModal extends React.Component {
     // getEvent fetch. fetches a single event to be edited
     AuthenticationManager.getUser(this.props.activeUser()).then(user => {
       // changing state of the event object from the getEvent
-      console.log(user)
       this.setState({
         userId : user.id,
         username: user.username,

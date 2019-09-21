@@ -22,6 +22,7 @@ class EditRecipeModal extends React.Component {
         name: "",
         type: "",
         ingredients: "",
+        recipeBookId: "",
         bookList: [],
         activeUserId: parseInt(sessionStorage.getItem("credentials")),
         loadingStatus: false
@@ -53,7 +54,7 @@ class EditRecipeModal extends React.Component {
         type: recipes.type,
         ingredients: recipes.ingredients,
         userId: recipes.userId,
-        recipeBookId: this.props.bookId,
+        recipeBookId: this.state.recipeBookId,
         id: recipes.id
       });
     });
@@ -61,7 +62,12 @@ class EditRecipeModal extends React.Component {
 
   // function that updates an existing event
   updateExistingRecipe = evt => {
+
     evt.preventDefault(); // stops evt?
+    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
+    window.alert("Please fill out the form right, idiot head.");
+    }
+    else {
     this.setState({ loadingStatus: true });
     const editedRecipe = {
       // creates edited event object with the values that we type in inputs
@@ -71,13 +77,16 @@ class EditRecipeModal extends React.Component {
       userId: this.state.userId,
       id: this.props.recipeId,
       activeUserId: this.state.activeUserId,
-      recipeBookId: this.props.bookId
+      recipeBookId: this.state.recipeBookId
+
     };
+
 
     // invokes editEvent function from EvenList.js, passes edited object and the id, and then closes modal
     this.props
       .editRecipe(editedRecipe, this.props.recipeId)
       .then(() => this.toggle());
+  }
   };
 
   // toggle function that opens/closes modal from ReactStrap
@@ -100,6 +109,8 @@ class EditRecipeModal extends React.Component {
 
     return (
       // div containing the modal. probably needs a class and/or id
+
+
       <div>
         {/* form for adding an event button */}
         <Form inline onSubmit={e => e.preventDefault()}>
@@ -141,12 +152,12 @@ class EditRecipeModal extends React.Component {
              <select
               defaultValue=""
               name="RecipeBookId"
-              id="RecipeBookDropDown"
+              id="recipeBookId"
               onChange={this.handleFieldChange}
             >
-              <option value="">Select Recipe Book</option>
+              <option value="">Please Select Book</option>
               {this.props.bookList.map(book => (book.userId === activeUser ?
-                <option key={book.name} id={book.name} value={book.name}>
+                <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                   {book.name}
                 </option> : null
               ))}
@@ -163,9 +174,12 @@ class EditRecipeModal extends React.Component {
           </ModalFooter>
         </Modal>
       </div>
+
     );
   }
+
 }
+
 
 export default EditRecipeModal;
 

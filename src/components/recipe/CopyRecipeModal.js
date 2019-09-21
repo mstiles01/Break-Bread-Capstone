@@ -24,15 +24,17 @@ class CopyRecipeModal extends Component {
 
 
     handleSubmit = () => {
-
-
+        if(this.state.recipeBookId === "") {
+            window.alert("Please Select A Recipe Book");
+        }
+        else{
         // create object for the copied skill with activeUser's id
         const newRecipeCard = {
             name: this.props.recipes.name,
             userId: this.state.activeUserId,
             type: this.props.recipes.type,
             ingredients: this.props.recipes.ingredients,
-            recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+            recipeBookId: this.state.recipeBookId
 
 
         }
@@ -44,10 +46,10 @@ class CopyRecipeModal extends Component {
                 this.cloneResources(postedRecipe.id)
                 this.props.copiedRecipeState(postedRecipe)
             }).then(this.toggle);
+        }
     }
 
     cloneResources = (recipeId) => {
-
         const newRecipeDetails = this.state.recipes.map(recipes => {
             // create resource object with the new skillId
             const newRecipeDetail = {
@@ -56,7 +58,7 @@ class CopyRecipeModal extends Component {
                 name: recipes.name,
                 type: recipes.type,
                 ingredients: recipes.ingredients,
-                recipeBookId: typeof this.state.recipeBookId === "string" ? this.props.bookList.find(book => this.state.recipeBookId === book.name).id : this.state.recipeBookId,
+                recipeBookId: this.state.recipeBookId,
                 isComplete: false
             }
 
@@ -74,7 +76,7 @@ class CopyRecipeModal extends Component {
     };
 
     render() {
-        
+
 
         return (
             <>
@@ -85,13 +87,13 @@ class CopyRecipeModal extends Component {
                     <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
                     <ModalBody>
                         <select
-                            name="RecipeBookId"
+                            name="recipeBookId"
                             id="recipeBookId"
                             onChange={this.handleFieldChange} >
+                                <option value="">Please Select Book</option>
 
-                            <option value="">Select Recipe Book</option>
                             {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
-                                <option key={book.recipeBookId} value={book.recipeBookID}>
+                                <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                                     {book.name}
                                 </option> : null
 
