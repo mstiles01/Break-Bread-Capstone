@@ -15,84 +15,13 @@
       "id": 2
     }
   ],
-  "recipes": [
-    {
-      "name": "Hello Joesph",
-      "type": "Hello boi",
-      "ingredients": "Hey boi",
-      "userId": 2,
-      "id": 2,
-      "activeUserId": 2,
-      "recipeBookId": "3"
-    },
-    {
-      "name": "Hello",
-      "type": "Hello",
-      "ingredients": "Hello",
-      "recipeBookId": "3",
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "name": "1",
-      "type": "1",
-      "ingredients": "1",
-      "recipeBookId": "4",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "Copy Test",
-      "type": "1",
-      "ingredients": "1",
-      "userId": 2,
-      "id": 5,
-      "activeUserId": 2,
-      "recipeBookId": "2"
-    },
-    {
-      "name": "1",
-      "type": "1",
-      "ingredients": "23",
-      "userId": 2,
-      "id": 6,
-      "activeUserId": 2,
-      "recipeBookId": "2"
-    },
-    {
-      "name": "1",
-      "type": "1",
-      "ingredients": "1",
-      "userId": 2,
-      "id": 7,
-      "activeUserId": 2,
-      "recipeBookId": "2"
-    }
-  ],
+  "recipes": [],
   "recipeBooks": [
     {
-      "name": "d",
-      "description": "d",
+      "name": "as",
+      "description": "as",
       "userId": 2,
       "id": 1
-    },
-    {
-      "name": "Test",
-      "description": "Test",
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "name": "Hello",
-      "description": "Hello",
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "name": "Test 2",
-      "description": "Test 2",
-      "userId": 1,
-      "id": 4
     }
   ]
 }
