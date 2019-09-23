@@ -41,7 +41,7 @@ class recipeAddModal extends React.Component {
         name: this.state.name,
         type: this.state.type,
         ingredients: this.state.ingredients,
-      recipeBookId: this.state.recipeBookId,
+      recipeBookId: parseInt(this.state.recipeBookId),
         userId: this.props.activeUser()
       };
       this.props.addNewRecipe(recipes).then(() => this.toggle());

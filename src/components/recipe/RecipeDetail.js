@@ -80,10 +80,12 @@ class RecipeDetail extends Component {
                 <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
                 <p>Type: {this.state.type}</p>
                 <p>Ingredients: {this.state.ingredients}</p>
-                { checkUser ?
+
                 <div className="EditRecBTN">
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.recipePushBack}>Back to Recipe</button>
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.bookPushBack}>Back to Recipe Books</button>
+                { checkUser ?
+                <div>
                 <EditRecipeModal bookList={this.state.bookList} {...this.props}
                 editRecipe={this.editRecipe} /> {" "}
                   </div>
@@ -92,11 +94,12 @@ class RecipeDetail extends Component {
 
             </div>
             </div>
+            </div>
 
 
         );
               }
-    //   it works jubfnasoefb
+    
 }
 
 export default RecipeDetail

@@ -20,37 +20,71 @@
       "email": "ab@c",
       "password": "12",
       "id": 3
+    },
+    {
+      "bio": "Hello!",
+      "username": "Michael ",
+      "email": "ab@c.com",
+      "password": "1234",
+      "id": 4
     }
   ],
   "recipes": [
     {
-      "name": "Hello",
-      "type": "test",
-      "ingredients": "alpha",
+      "name": "1234",
+      "type": "hi",
+      "ingredients": "hi",
+      "recipeBookId": 1,
       "userId": 2,
-      "id": 1,
-      "activeUserId": 2,
-      "recipeBookId": 203
+      "id": 1
+    },
+    {
+      "name": "Omega ",
+      "type": "hi",
+      "ingredients": "test",
+      "recipeBookId": 1,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "Omega ",
+      "userId": 2,
+      "type": "hi",
+      "ingredients": "test",
+      "recipeBookId": 2,
+      "id": 3
     }
   ],
   "recipeBooks": [
     {
-      "name": "Hello",
-      "description": "Hello",
-      "userId": 2,
-      "id": 201
-    },
-    {
-      "name": "Test",
-      "description": "Test",
-      "userId": 2,
-      "id": 202
-    },
-    {
       "name": "Alpha",
       "description": "Alpha",
       "userId": 2,
-      "id": 203
+      "id": 1
+    },
+    {
+      "name": "Omega ",
+      "description": "test",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "name": "Hellotest",
+      "description": "hellotest",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "name": "Test",
+      "description": "Hi",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "name": "Hello",
+      "description": "test",
+      "userId": 4,
+      "id": 5
     }
   ]
 }

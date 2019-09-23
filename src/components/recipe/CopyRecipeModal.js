@@ -100,7 +100,7 @@ class CopyRecipeModal extends Component {
                     <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
                     <ModalBody>
                     <section className="copy__addBook__modal">
-            <AddBookModal addNewBook={this.addNewBook} {...this.props}/>
+
           </section>
                         <select
                             name="recipeBookId"
@@ -114,6 +114,7 @@ class CopyRecipeModal extends Component {
                                 </option> : null
                             ))}
                         </select>
+                        <AddBookModal addNewBook={this.addNewBook} {...this.props} />
 
                     </ModalBody>
                     <ModalFooter>
