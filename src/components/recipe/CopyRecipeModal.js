@@ -42,6 +42,7 @@ class CopyRecipeModal extends Component {
 
         }
 
+
         // post the new recipe to database, pass the id to cloneResources and copy all the resources
         this.props.copyRecipe(newRecipeCard)
             .then(postedRecipe => {
@@ -88,6 +89,8 @@ class CopyRecipeModal extends Component {
         });
     }
 
+
+
     render() {
 
 
@@ -114,7 +117,7 @@ class CopyRecipeModal extends Component {
                                 </option> : null
                             ))}
                         </select>
-                        <AddBookModal addNewBook={this.addNewBook} {...this.props} />
+                        
 
                     </ModalBody>
                     <ModalFooter>

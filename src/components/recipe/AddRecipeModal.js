@@ -8,6 +8,8 @@ import {
   Input,
   Form
 } from "reactstrap";
+import BookListManager from '../modules/RecipeBookManager'
+
 class recipeAddModal extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +58,19 @@ class recipeAddModal extends React.Component {
     let value = e.target.value;
     this.setState({ unmountOnClose: JSON.parse(value) });
   }
+
+  bookRefresh = () => {
+    BookListManager.getAllBooks()
+      .then((books) => {
+        this.setState({
+          books: books
+        })
+      })
+    this.getBookList()
+  }
   // put functionality here  example:handle field change
+
+
   render() {
 
     return (
@@ -97,6 +111,8 @@ class recipeAddModal extends React.Component {
 
             />
 
+
+
             <select
               name="RecipeBookId"
               id="recipeBookId"
@@ -111,6 +127,7 @@ class recipeAddModal extends React.Component {
 
 
             </select>
+
 
 
           </ModalBody>

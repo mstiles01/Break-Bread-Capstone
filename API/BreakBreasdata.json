@@ -29,62 +29,25 @@
       "id": 4
     }
   ],
-  "recipes": [
-    {
-      "name": "1234",
-      "type": "hi",
-      "ingredients": "hi",
-      "recipeBookId": 1,
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "name": "Omega ",
-      "type": "hi",
-      "ingredients": "test",
-      "recipeBookId": 1,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "name": "Omega ",
-      "userId": 2,
-      "type": "hi",
-      "ingredients": "test",
-      "recipeBookId": 2,
-      "id": 3
-    }
-  ],
+  "recipes": [],
   "recipeBooks": [
     {
-      "name": "Alpha",
-      "description": "Alpha",
+      "name": "Hello",
+      "description": "1234",
       "userId": 2,
       "id": 1
     },
     {
-      "name": "Omega ",
-      "description": "test",
+      "name": "dghpjnstd",
+      "description": "tdspndt",
       "userId": 2,
       "id": 2
     },
     {
-      "name": "Hellotest",
-      "description": "hellotest",
-      "userId": 4,
+      "name": "sure",
+      "description": "sure",
+      "userId": 2,
       "id": 3
-    },
-    {
-      "name": "Test",
-      "description": "Hi",
-      "userId": 4,
-      "id": 4
-    },
-    {
-      "name": "Hello",
-      "description": "test",
-      "userId": 4,
-      "id": 5
     }
   ]
 }
