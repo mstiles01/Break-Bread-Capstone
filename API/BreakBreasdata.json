@@ -13,15 +13,65 @@
       "email": "mstiles01@icloud.com",
       "password": "1234",
       "id": 2
+    },
+    {
+      "bio": "hi",
+      "username": "mstiles01",
+      "email": "ab@c",
+      "password": "12",
+      "id": 3
+    },
+    {
+      "bio": "Hello!",
+      "username": "Michael ",
+      "email": "ab@c.com",
+      "password": "1234",
+      "id": 4
     }
   ],
-  "recipes": [],
+  "recipes": [
+    {
+      "name": "v",
+      "type": "v",
+      "ingredients": "33",
+      "userId": 4,
+      "id": 4,
+      "activeUserId": 4,
+      "recipeBookId": 6
+    },
+    {
+      "name": "v",
+      "userId": 2,
+      "type": "v",
+      "ingredients": "2",
+      "recipeBookId": "5",
+      "id": 5
+    }
+  ],
   "recipeBooks": [
     {
-      "name": "as",
-      "description": "as",
+      "name": "Andy",
+      "description": "Andy",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "name": "Alpha",
+      "description": "Alpha",
       "userId": 2,
-      "id": 1
+      "id": 4
+    },
+    {
+      "name": "Hello",
+      "description": "Hello",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "PrePop",
+      "description": "PrePop",
+      "userId": 4,
+      "id": 6
     }
   ]
 }

@@ -8,6 +8,8 @@ import {
   Input,
   Form
 } from "reactstrap";
+import BookListManager from '../modules/RecipeBookManager'
+
 class recipeAddModal extends React.Component {
   constructor(props) {
     super(props);
@@ -36,12 +38,12 @@ class recipeAddModal extends React.Component {
     if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
       window.alert("Please fill out the form right, idiot head.");
     } else {
-      this.setState({ loadingStatus: true });
+      
       const recipes = {
         name: this.state.name,
         type: this.state.type,
         ingredients: this.state.ingredients,
-      recipeBookId: this.state.recipeBookId,
+      recipeBookId: parseInt(this.state.recipeBookId),
         userId: this.props.activeUser()
       };
       this.props.addNewRecipe(recipes).then(() => this.toggle());
@@ -56,7 +58,11 @@ class recipeAddModal extends React.Component {
     let value = e.target.value;
     this.setState({ unmountOnClose: JSON.parse(value) });
   }
+
+
   // put functionality here  example:handle field change
+
+
   render() {
 
     return (
@@ -97,19 +103,23 @@ class recipeAddModal extends React.Component {
 
             />
 
+
+
             <select
               name="RecipeBookId"
               id="recipeBookId"
               onChange={this.handleFieldChange}>
                 <option value="">Please select</option>
               {this.props.bookList.map(book => ( book.userId === this.props.activeUser() ?
-                <option  key={book.id} value={book.id} name={book.name} >
+                <option  key={book.id} id={this.state.recipeBookId} value={book.id} name={book.name} >
                   {book.name}
+
                 </option> : null
               ))}
 
 
             </select>
+
 
 
           </ModalBody>

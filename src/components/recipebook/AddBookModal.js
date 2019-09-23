@@ -1,4 +1,5 @@
 import React from "react";
+import RecipeBookManager from '../modules/RecipeBookManager'
 import {
   Button,
   Modal,
@@ -15,8 +16,7 @@ class addBookModal extends React.Component {
       modal: false,
       unmountOnClose: true,
       name: "",
-      description: "",
-      loadingStatus: false
+      description: ""
       // put properties here
     };
     this.toggle = this.toggle.bind(this);
@@ -26,19 +26,19 @@ class addBookModal extends React.Component {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
+
   };
   constructNewBook = evt => {
     evt.preventDefault();
     if (this.state.name === "" || this.state.description === "") {
       window.alert("Please fill out the form right, idiot head.");
     } else {
-      this.setState({ loadingStatus: true });
       const recipeBooks = {
         name: this.state.name,
         description: this.state.description,
         userId: this.props.activeUser()
       };
-      this.props.addNewRecipeBook(recipeBooks).then(() => this.toggle());
+      this.props.addNewBook(recipeBooks).then(() => this.toggle());
     }
   };
   toggle() {
@@ -50,6 +50,17 @@ class addBookModal extends React.Component {
     let value = e.target.value;
     this.setState({ unmountOnClose: JSON.parse(value) });
   }
+
+  addNewBook = obj => {
+    return RecipeBookManager.postBook(obj).then(() => {
+      RecipeBookManager.getAllBooks(this.props.activeUser()).then(books => {
+            this.setState({
+              books: books
+            });
+        });
+    });
+}
+
   // put functionality here  example:handle field change
   render() {
     return (
@@ -65,6 +76,8 @@ class addBookModal extends React.Component {
           toggle={this.toggle}
           className={this.props.className}
           unmountOnClose={this.state.unmountOnClose}
+
+
         >
           <ModalHeader toggle={this.toggle}>Add Recipe Book</ModalHeader>
           <ModalBody>

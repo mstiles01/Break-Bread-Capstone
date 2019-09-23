@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import BookListManager from '../modules/RecipeBookManager'
+import AddBookModal from '../recipebook/AddBookModal'
+
 
 class CopyRecipeModal extends Component {
     constructor(props) {
@@ -28,7 +31,7 @@ class CopyRecipeModal extends Component {
             window.alert("Please Select A Recipe Book");
         }
         else{
-        // create object for the copied skill with activeUser's id
+        // create object for the copied recipe with activeUser's id
         const newRecipeCard = {
             name: this.props.recipes.name,
             userId: this.state.activeUserId,
@@ -39,10 +42,10 @@ class CopyRecipeModal extends Component {
 
         }
 
+
         // post the new recipe to database, pass the id to cloneResources and copy all the resources
         this.props.copyRecipe(newRecipeCard)
             .then(postedRecipe => {
-                console.log(postedRecipe)
                 this.cloneResources(postedRecipe.id)
                 this.props.copiedRecipeState(postedRecipe)
             }).then(this.toggle);
@@ -75,6 +78,19 @@ class CopyRecipeModal extends Component {
         this.setState(stateToChange);
     };
 
+    getBookList() {
+        BookListManager.getAllBooks()
+          .then((bookList) => {
+            this.setState({
+              bookList: bookList
+            })
+          })
+      }
+
+
+
+
+
     render() {
 
 
@@ -86,6 +102,9 @@ class CopyRecipeModal extends Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
                     <ModalBody>
+                    <section className="copy__addBook__modal">
+
+          </section>
                         <select
                             name="recipeBookId"
                             id="recipeBookId"
@@ -96,10 +115,10 @@ class CopyRecipeModal extends Component {
                                 <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                                     {book.name}
                                 </option> : null
-
                             ))}
-
                         </select>
+
+
                     </ModalBody>
                     <ModalFooter>
                         <Button onClick={this.handleSubmit} color="success">Yes</Button>
