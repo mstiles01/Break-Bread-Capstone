@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import RecipeBookManager from '../modules/RecipeBookManager'
+import BookListManager from '../modules/RecipeBookManager'
 import AddBookModal from '../recipebook/AddBookModal'
 
 
@@ -46,7 +46,6 @@ class CopyRecipeModal extends Component {
         // post the new recipe to database, pass the id to cloneResources and copy all the resources
         this.props.copyRecipe(newRecipeCard)
             .then(postedRecipe => {
-                console.log(postedRecipe)
                 this.cloneResources(postedRecipe.id)
                 this.props.copiedRecipeState(postedRecipe)
             }).then(this.toggle);
@@ -79,15 +78,16 @@ class CopyRecipeModal extends Component {
         this.setState(stateToChange);
     };
 
-    addNewBook = obj => {
-        return RecipeBookManager.postBook(obj).then(() => {
-          RecipeBookManager.getAllBooks(this.props.activeUser()).then(books => {
-                this.setState({
-                  books: books
-                });
-            });
-        });
-    }
+    getBookList() {
+        BookListManager.getAllBooks()
+          .then((bookList) => {
+            this.setState({
+              bookList: bookList
+            })
+          })
+      }
+
+
 
 
 
@@ -117,7 +117,7 @@ class CopyRecipeModal extends Component {
                                 </option> : null
                             ))}
                         </select>
-                        
+
 
                     </ModalBody>
                     <ModalFooter>

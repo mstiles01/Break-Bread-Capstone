@@ -59,15 +59,7 @@ class recipeAddModal extends React.Component {
     this.setState({ unmountOnClose: JSON.parse(value) });
   }
 
-  bookRefresh = () => {
-    BookListManager.getAllBooks()
-      .then((books) => {
-        this.setState({
-          books: books
-        })
-      })
-    this.getBookList()
-  }
+  
   // put functionality here  example:handle field change
 
 

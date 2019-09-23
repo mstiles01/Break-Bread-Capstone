@@ -5,6 +5,7 @@ import AddRecipeModal from './AddRecipeModal'
 import BookListManager from '../modules/RecipeBookManager'
 import RecipeBookManager from '../modules/RecipeBookManager'
 import AddBookModal from '../recipebook/AddBookModal'
+import CopyRecipeModal from '../recipe/CopyRecipeModal'
 
 class RecipeList extends Component {
   state = {
@@ -60,9 +61,10 @@ class RecipeList extends Component {
   }
 
   copyRecipe = (RecipeObj) => {
-    console.log(RecipeObj)
     return RecipeManager.postRecipe(RecipeObj)
+
   }
+
 
   addNewBook = obj => {
     return RecipeBookManager.postBook(obj).then(() => {
@@ -81,7 +83,8 @@ class RecipeList extends Component {
          <div><h1>Community Recipe List</h1></div>
         <section className="button__container">
         <AddBookModal  addNewBook={this.addNewBook} {...this.props} />
-          <AddRecipeModal addNewRecipe={this.addNewRecipe}  bookRefresh={this.bookRefresh} bookList={this.state.bookList} {...this.props} />
+          <AddRecipeModal addNewRecipe={this.addNewRecipe}   bookList={this.state.bookList} {...this.props} />
+
         </section>
         <div className="cards__container">
           {this.state.recipes.map(recipes => (
@@ -90,7 +93,9 @@ class RecipeList extends Component {
               recipes={recipes}
               deleteRecipe={this.deleteRecipe}
               copyRecipe={this.copyRecipe}
+              bookList={this.state.bookList}
               copiedRecipeState={this.copiedRecipeState}
+              addNewBook={this.addNewBook}
               {...this.props}
             />
           ))}

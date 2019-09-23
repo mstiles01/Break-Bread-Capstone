@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RecipeManager from '.././modules/RecipeManager';
 import EditRecipeModal from './EditRecipeModal'
 import BookListManager from '../modules/RecipeBookManager'
+import CopyRecipeModal from '../recipe/CopyRecipeModal'
 
 class RecipeDetail extends Component {
     state = {
@@ -84,6 +85,7 @@ class RecipeDetail extends Component {
                 <div className="EditRecBTN">
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.recipePushBack}>Back to Recipe</button>
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.bookPushBack}>Back to Recipe Books</button>
+                
                 { checkUser ?
                 <div>
                 <EditRecipeModal bookList={this.state.bookList} {...this.props}
@@ -92,6 +94,7 @@ class RecipeDetail extends Component {
                 : null
                 }
 
+
             </div>
             </div>
             </div>
@@ -99,7 +102,7 @@ class RecipeDetail extends Component {
 
         );
               }
-    
+
 }
 
 export default RecipeDetail

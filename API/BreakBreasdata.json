@@ -29,25 +29,46 @@
       "id": 4
     }
   ],
-  "recipes": [],
+  "recipes": [
+    {
+      "name": "v",
+      "userId": 2,
+      "type": "v",
+      "ingredients": "v",
+      "recipeBookId": "4",
+      "id": 3
+    },
+    {
+      "name": "v",
+      "type": "v",
+      "ingredients": "2",
+      "userId": 4,
+      "id": 4,
+      "activeUserId": 4,
+      "recipeBookId": 3
+    },
+    {
+      "name": "1234",
+      "type": "1234",
+      "ingredients": "6",
+      "userId": 2,
+      "id": 5,
+      "activeUserId": 2,
+      "recipeBookId": 4
+    }
+  ],
   "recipeBooks": [
     {
-      "name": "Hello",
-      "description": "1234",
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "name": "dghpjnstd",
-      "description": "tdspndt",
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "name": "sure",
-      "description": "sure",
-      "userId": 2,
+      "name": "Andy",
+      "description": "Andy",
+      "userId": 4,
       "id": 3
+    },
+    {
+      "name": "Alpha",
+      "description": "Alpha",
+      "userId": 2,
+      "id": 4
     }
   ]
 }
