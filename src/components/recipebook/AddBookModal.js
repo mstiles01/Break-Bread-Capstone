@@ -16,8 +16,7 @@ class addBookModal extends React.Component {
       modal: false,
       unmountOnClose: true,
       name: "",
-      description: "",
-      loadingStatus: false
+      description: ""
       // put properties here
     };
     this.toggle = this.toggle.bind(this);
@@ -34,7 +33,6 @@ class addBookModal extends React.Component {
     if (this.state.name === "" || this.state.description === "") {
       window.alert("Please fill out the form right, idiot head.");
     } else {
-      this.setState({ loadingStatus: true });
       const recipeBooks = {
         name: this.state.name,
         description: this.state.description,

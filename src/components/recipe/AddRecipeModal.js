@@ -38,7 +38,7 @@ class recipeAddModal extends React.Component {
     if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
       window.alert("Please fill out the form right, idiot head.");
     } else {
-      this.setState({ loadingStatus: true });
+      
       const recipes = {
         name: this.state.name,
         type: this.state.type,
@@ -59,7 +59,7 @@ class recipeAddModal extends React.Component {
     this.setState({ unmountOnClose: JSON.parse(value) });
   }
 
-  
+
   // put functionality here  example:handle field change
 
 
