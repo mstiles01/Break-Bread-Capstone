@@ -4,6 +4,7 @@ import EditBioModal from './EditBioModal';
 import ProfileManager from '../modules/ProfileManager'
 import BookList from '../recipebook/BookList'
 import RecipeBookManager from '../modules/RecipeBookManager'
+import AddBookModal from '../recipebook/AddBookModal';
 
 
 class MainView extends Component {
@@ -12,13 +13,16 @@ class MainView extends Component {
             username: "",
             bio: "",
             email: "",
-            password: ""
+            password: "",
         }
     }
     componentDidMount() {
         AuthenticationManager.getUser(this.props.activeUser()).then(user =>
             this.setState(user))
+
     }
+
+
 
 
     editBio = (obj, id) => {
@@ -28,15 +32,23 @@ class MainView extends Component {
         })
     }
 
-    addNewBook = obj => {
-      return RecipeBookManager.postBook(obj).then(() => {
+    addNewBook = recipeBooks => {
+      return RecipeBookManager.postBook(recipeBooks).then(() => {
         RecipeBookManager.getAllBooks(this.props.activeUser()).then(books => {
               this.setState({
-                books: books
+                recipeBooks: recipeBooks
               });
           });
       });
+
   }
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +62,7 @@ class MainView extends Component {
               <EditBioModal editBio={this.editBio} {...this.props} />
             </section>
           <section className="recipe__book__container">
-            <BookList addNewBook={this.addNewBook} {...this.props}/>
+            <BookList   {...this.props}/>
           </section>
 
           </React.Fragment>

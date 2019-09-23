@@ -38,7 +38,6 @@ class Login extends Component {
     }
 
     render() {
-        console.log(this.state.users);
         return (
             <React.Fragment>
                 <form onSubmit={this.handleLogin}>

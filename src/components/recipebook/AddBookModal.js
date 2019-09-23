@@ -27,6 +27,7 @@ class addBookModal extends React.Component {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
+
   };
   constructNewBook = evt => {
     evt.preventDefault();
@@ -61,6 +62,7 @@ class addBookModal extends React.Component {
         });
     });
 }
+
   // put functionality here  example:handle field change
   render() {
     return (
@@ -76,6 +78,8 @@ class addBookModal extends React.Component {
           toggle={this.toggle}
           className={this.props.className}
           unmountOnClose={this.state.unmountOnClose}
+
+
         >
           <ModalHeader toggle={this.toggle}>Add Recipe Book</ModalHeader>
           <ModalBody>

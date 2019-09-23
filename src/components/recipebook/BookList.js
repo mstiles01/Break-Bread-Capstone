@@ -18,7 +18,7 @@ class BookList extends Component {
     })
    }
 
-   addNewRecipeBook = obj => {
+   addNewBook = obj => {
     return RecipeBookManager.postBook(obj).then(() => {
         RecipeBookManager.getAllBooks(this.props.activeUser()).then(recipeBooks => {
             this.setState({
@@ -48,7 +48,7 @@ class BookList extends Component {
       <React.Fragment>
          <div><h1>Book List</h1></div>
         <section className="button__container">
-          <AddBookModal addNewRecipeBook={this.addNewRecipeBook} {...this.props} />
+          <AddBookModal addNewBook={this.addNewBook} {...this.props} />
         </section>
 
 

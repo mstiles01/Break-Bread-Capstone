@@ -31,6 +31,7 @@ class EditRecipeModal extends React.Component {
     this.toggle = this.toggle.bind(this);
     // does this remove the modal from the screen when finished??? what does this do?
     this.changeUnmountOnClose = this.changeUnmountOnClose.bind(this);
+
     }
 
     // handleFieldChange function that takes an event as a parameter.
@@ -64,7 +65,7 @@ class EditRecipeModal extends React.Component {
   updateExistingRecipe = evt => {
 
     evt.preventDefault(); // stops evt?
-    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
+    if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === this.state.ingredients){
     window.alert("Please fill out the form right, idiot head.");
     }
     else {
@@ -88,6 +89,8 @@ class EditRecipeModal extends React.Component {
       .then(() => this.toggle());
   }
   };
+
+
 
   // toggle function that opens/closes modal from ReactStrap
   toggle() {
@@ -150,12 +153,12 @@ class EditRecipeModal extends React.Component {
               value={this.state.ingredients}
             />
              <select
-              defaultValue=""
+              defaultValue= {this.state.recipeBookId}
               name="RecipeBookId"
               id="recipeBookId"
               onChange={this.handleFieldChange}
             >
-              <option value="">Please Select Book</option>
+
               {this.props.bookList.map(book => (book.userId === activeUser ?
                 <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                   {book.name}
