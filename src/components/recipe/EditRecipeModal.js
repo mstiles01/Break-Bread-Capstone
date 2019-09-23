@@ -22,7 +22,7 @@ class EditRecipeModal extends React.Component {
         name: "",
         type: "",
         ingredients: "",
-        recipeBookId: "",
+        recipeBookId: parseInt(0),
         bookList: [],
         activeUserId: parseInt(sessionStorage.getItem("credentials")),
         loadingStatus: false
@@ -43,6 +43,7 @@ class EditRecipeModal extends React.Component {
     stateToChange[evt.target.id] = evt.target.value;
     // sets the state of stateToChange using the value of the targeted event
     this.setState(stateToChange);
+
   };
 
   // function that takes the id of an event (from an API method) and changes the state of the event
@@ -55,7 +56,7 @@ class EditRecipeModal extends React.Component {
         type: recipes.type,
         ingredients: recipes.ingredients,
         userId: recipes.userId,
-        recipeBookId: this.state.recipeBookId,
+        recipeBookId: recipes.recipeBookId,
         id: recipes.id
       });
     });
@@ -78,7 +79,7 @@ class EditRecipeModal extends React.Component {
       userId: this.state.userId,
       id: this.props.recipeId,
       activeUserId: this.state.activeUserId,
-      recipeBookId: this.state.recipeBookId
+      recipeBookId: parseInt(this.state.recipeBookId)
 
     };
 
@@ -153,12 +154,11 @@ class EditRecipeModal extends React.Component {
               value={this.state.ingredients}
             />
              <select
-              defaultValue= {this.state.recipeBookId}
+              value= {this.state.recipeBookId}
               name="RecipeBookId"
               id="recipeBookId"
               onChange={this.handleFieldChange}
             >
-
               {this.props.bookList.map(book => (book.userId === activeUser ?
                 <option key={book.name} id={this.state.recipeBookId} value={book.id}  name={book.name}>
                   {book.name}
