@@ -48,15 +48,15 @@ class BookList extends Component {
     return (
       <React.Fragment>
         <div className="bookListBack">
-         <div><h1>Book List</h1></div>
-        <section className="button__container">
+         <div className="BookHeader"><h1>Book List</h1></div>
+        <section className="Addbutton__container">
           <AddBookModal addNewBook={this.addNewBook} {...this.props} />
         </section>
 
-
+          <div className="Bookcard__container">
           {this.state.recipeBooks.map(recipeBook => (
           recipeBook.userId === this.props.activeUser() ?
-             <div className="Bookcard__container" key={recipeBook.id}>
+             <div className="Bookcard__div" key={recipeBook.id}>
             <BookCard
 
               recipeBooks={recipeBook}
@@ -67,6 +67,7 @@ class BookList extends Component {
               </div>
               : null
           ))}
+          </div>
           </div>
 
       </React.Fragment>
