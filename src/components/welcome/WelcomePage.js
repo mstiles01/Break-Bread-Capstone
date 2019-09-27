@@ -3,24 +3,32 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Jumbotron } from "reactstrap";
+import "./WelcomePageStyle.css";
+import {Button} from "reactstrap";
+import RegisterModal from "../auth/Register"
 
 
 export default class Welcome extends Component {
   render() {
     return (
-      <Jumbotron>
+      <div className="welcomeContainerImg">
+
         <React.Fragment>
           <Container id="welcomeContainer">
+
+            <div className="welcomeOverlay"></div>
             <Row>
               <Col className="welcomePage">
-                <h1 id="header">Welcome To BreakBread</h1>
+                <div className="boarderText">
+                <h1 id="headerText">Welcome To BreakBread</h1>
+                </div>
               </Col>
             </Row>
+            <div className="Reg_Log_Container">
             <Row>
               <Col className="welcomePage">
-                <Link to="/register">
-                  <p>Register</p>
-                </Link>
+                <RegisterModal {...this.props}>
+                </RegisterModal>
               </Col>
             </Row>
             <Row>
@@ -30,14 +38,18 @@ export default class Welcome extends Component {
             </Row>
             <Row>
               <Col className="welcomePage">
-                <Link to="/login">
+                <Button to="/login">
                   <p>Login</p>
-                </Link>
+                </Button>
               </Col>
             </Row>
+            </div>
           </Container>
         </React.Fragment>
-      </Jumbotron>
+
+      </div>
+
+
     );
   }
 }

@@ -1,0 +1,41 @@
+.addBookdiv{
+margin: 10px 10px 10px 10px;
+display: flex;
+justify-content: center;
+flex-direction: row;
+
+}
+
+.addRecpDiv {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cards__container{
+    border: 3px solid black;
+    margin: 5px 5px 5px 5px;
+    /* background: #5e011f; */
+    flex-flow: column wrap;
+    width: 75%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow: scroll;
+    opacity: 0.85;
+}
+
+.RecpListBack{
+    background-image: url('../../../src/dinnertable.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.communityRecpHead{
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}

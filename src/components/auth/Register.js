@@ -13,10 +13,13 @@ class Register extends React.Component {
             username: "",
             password: "",
             confirmPassword: "",
-            modal: false
+            modal: false,
+           unmountOnClose: true
+
         };
 
         this.toggle = this.toggle.bind(this);
+        this.changeUnmountOnClose = this.changeUnmountOnClose.bind(this);
     }
 
     componentDidMount() {
@@ -41,6 +44,10 @@ class Register extends React.Component {
             modal: !prevState.modal
         }));
     }
+    changeUnmountOnClose(e) {
+        let value = e.target.value;
+        this.setState({ unmountOnClose: JSON.parse(value) });
+      }
 
     handleRegister = event => {
         event.preventDefault();

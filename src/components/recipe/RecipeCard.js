@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import RecipeManager from "../modules/RecipeManager"
 import CopyRecipeModal from './CopyRecipeModal';
 import BookListManager from '../modules/RecipeBookManager'
-
+import './recipeCardStyle.css'
 
 class RecipeCard extends Component {
     state = {
@@ -39,8 +39,8 @@ class RecipeCard extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    <h3>Recipe Name:</h3> <b>{this.props.recipes.name}</b>
-                    <p>Type: {this.props.recipes.type}</p>
+                    <h3>Recipe Name: {this.props.recipes.name}</h3>
+                    <h4>Type: {this.props.recipes.type}</h4>
 
                     <CopyRecipeModal
                         recipes={this.state.recipes}

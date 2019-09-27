@@ -5,7 +5,7 @@ import AddRecipeModal from './AddRecipeModal'
 import BookListManager from '../modules/RecipeBookManager'
 import RecipeBookManager from '../modules/RecipeBookManager'
 import AddBookModal from '../recipebook/AddBookModal'
-import CopyRecipeModal from '../recipe/CopyRecipeModal'
+import './recipeListStyle.css'
 
 class RecipeList extends Component {
   state = {
@@ -80,10 +80,15 @@ class RecipeList extends Component {
   render() {
     return (
       <React.Fragment>
-         <div><h1>Community Recipe List</h1></div>
+        <div className="RecpListBack">
+         <div className="communityRecpHead"><h1>Community Recipe List</h1></div>
         <section className="button__container">
+          <div className="addBookdiv">
         <AddBookModal  addNewBook={this.addNewBook} {...this.props} />
+        </div>
+        <div className="addRecpDiv">
           <AddRecipeModal addNewRecipe={this.addNewRecipe}   bookList={this.state.bookList} {...this.props} />
+          </div>
 
         </section>
         <div className="cards__container">
@@ -99,6 +104,7 @@ class RecipeList extends Component {
               {...this.props}
             />
           ))}
+        </div>
         </div>
       </React.Fragment>
     );

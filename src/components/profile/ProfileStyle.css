@@ -1,0 +1,7 @@
+.recipe__book__container .bookListBack{
+    display: hidden;
+}
+
+.profileBack .recipe__book__container .bookListBack {
+    background: black;
+}
