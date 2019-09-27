@@ -22,11 +22,12 @@ class recipeAddModal extends React.Component {
       ingredients: "",
       bookList: [],
       userId: 0,
-      loadingStatus: false
+      modal: false,
+      backdrop: true
       // put properties here
     };
     this.toggle = this.toggle.bind(this);
-    this.changeUnmountOnClose = this.changeUnmountOnClose.bind(this);
+    this.changeBackdrop = this.changeBackdrop.bind(this);
   }
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -38,7 +39,7 @@ class recipeAddModal extends React.Component {
     if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
       window.alert("Please fill out the form right, idiot head.");
     } else {
-      
+
       const recipes = {
         name: this.state.name,
         type: this.state.type,
@@ -54,11 +55,14 @@ class recipeAddModal extends React.Component {
       modal: !prevState.modal
     }));
   }
-  changeUnmountOnClose(e) {
-    let value = e.target.value;
-    this.setState({ unmountOnClose: JSON.parse(value) });
-  }
 
+  changeBackdrop(e) {
+    let value = e.target.value;
+    if (value !== 'static') {
+      value = JSON.parse(value);
+    }
+    this.setState({ backdrop: value });
+  }
 
   // put functionality here  example:handle field change
 

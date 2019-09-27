@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+
+
+.welcomeContainerImg {
+background-image: url('../../../src/darkbread-pixlr.jpg');
+background-size: cover;
+background-position: center center;
+position: relative;
+top: 0;
+bottom: 0;
+height: 100vh;
+z-index: 0
+}
+
+.boarderText {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+#headerText {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 5rem;
+    z-index: 6;
+
+}
+
+.welcomePage {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    z-index: 6;
+}
+
+
+.Reg_Log_Container {
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin: 3rem 3rem 3rem 3rem;
+
+}
+
+
+
+

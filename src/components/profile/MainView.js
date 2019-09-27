@@ -5,6 +5,9 @@ import ProfileManager from '../modules/ProfileManager'
 import BookList from '../recipebook/BookList'
 import RecipeBookManager from '../modules/RecipeBookManager'
 import AddBookModal from '../recipebook/AddBookModal';
+import "./ProfileStyle.css"
+
+
 
 
 class MainView extends Component {

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import BookCard from './BookCard'
 import RecipeBookManager from '../modules/RecipeBookManager'
 import AddBookModal from './AddBookModal'
+import './BookListStyle.css'
 
 class BookList extends Component {
     state = {
@@ -46,6 +47,7 @@ class BookList extends Component {
     // const checkUser = this.state.recipeBooks.userId === this.props.activeUser()
     return (
       <React.Fragment>
+        <div className="bookListBack">
          <div><h1>Book List</h1></div>
         <section className="button__container">
           <AddBookModal addNewBook={this.addNewBook} {...this.props} />
@@ -65,6 +67,7 @@ class BookList extends Component {
               </div>
               : null
           ))}
+          </div>
 
       </React.Fragment>
     );

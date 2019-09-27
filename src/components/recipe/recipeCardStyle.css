@@ -1,0 +1,13 @@
+
+
+.card {
+    z-index:3;
+}
+
+.card-content{
+    color: white;
+    z-index: 2;
+    background: #5e011f;
+    opacity: 2;
+    
+}
