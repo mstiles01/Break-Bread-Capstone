@@ -10,6 +10,7 @@ import "./ProfileStyle.css"
 
 
 
+
 class MainView extends Component {
     state = {
         user: {

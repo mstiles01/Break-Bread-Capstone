@@ -1,13 +1,22 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import UserDataManager from "../modules/AuthenticationManager"
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from 'reactstrap';
 
 class Login extends Component {
-    state = {
+    constructor(props) {
+        super(props);
+        this.state ={
         email: "",
         password: "",
-        users: []
+        users: [],
+        modal: false,
+         unmountOnClose: true
     };
+    this.toggle = this.toggle.bind(this);
+    this.changeUnmountOnClose = this.changeUnmountOnClose.bind(this);
+
+}
 
     handleFieldChange = event => {
         const stateToChange = {};
@@ -37,37 +46,55 @@ class Login extends Component {
         });
     }
 
+    toggle() {
+        this.setState(prevState => ({
+            modal: !prevState.modal
+        }));
+    }
+    changeUnmountOnClose(e) {
+        let value = e.target.value;
+        this.setState({ unmountOnClose: JSON.parse(value) });
+      }
+
     render() {
         return (
             <React.Fragment>
-                <form onSubmit={this.handleLogin}>
-                    <fieldset className="loginSection">
-                        <h3>Please Log In</h3>
-                        <div className="loginForm">
-                            <input
-                                onChange={this.handleFieldChange}
-                                type="email"
-                                id="email"
-                                placeholder="Email address"
-                                required
-                                autoFocus=""
-                            /><br />
-                            <input
-                                onChange={this.handleFieldChange}
-                                type="password"
-                                id="password"
-                                placeholder="Password"
-                                required
-                            />
-                        </div>
-                        <button type="submit">Sign In</button>
-                        <p>Or</p>
+                <div>
+                <Button className="registerbtn" color="danger" onClick={this.toggle}>Login</Button>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                    <ModalHeader toggle={this.toggle}>Sign up</ModalHeader>
+                    <ModalBody>
+                    <form onSubmit={this.handleLogin}>
+                    <fieldset className="loginSection">
+                        <h3>Please Log In</h3>
+                        <div className="loginForm">
+                            <input
+                                onChange={this.handleFieldChange}
+                                type="email"
+                                id="email"
+                                placeholder="Email address"
+                                required
+                                autoFocus=""
+                            /><br />
+                            <input
+                                onChange={this.handleFieldChange}
+                                type="password"
+                                id="password"
+                                placeholder="Password"
+                                required
+                            />
+                        </div>
+                        </fieldset>
+                        </form>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.handleLogin}>Login</Button>{' '}
+                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                    </ModalFooter>
+                </Modal>
+            </div>
 
-                        <Link to={`/register`}>
-                            <button>Sign Up!</button>
-                        </Link>
-                    </fieldset>
-                </form>
+
             </React.Fragment>
         );
     }

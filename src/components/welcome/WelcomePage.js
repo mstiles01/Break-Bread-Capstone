@@ -6,7 +6,7 @@ import { Container, Row, Col, Jumbotron } from "reactstrap";
 import "./WelcomePageStyle.css";
 import {Button} from "reactstrap";
 import RegisterModal from "../auth/Register"
-
+import LoginModal from "../auth/Login"
 
 export default class Welcome extends Component {
   render() {
@@ -38,9 +38,8 @@ export default class Welcome extends Component {
             </Row>
             <Row>
               <Col className="welcomePage">
-                <Button to="/login">
-                  <p>Login</p>
-                </Button>
+              <LoginModal {...this.props}>
+                </LoginModal>
               </Col>
             </Row>
             </div>
