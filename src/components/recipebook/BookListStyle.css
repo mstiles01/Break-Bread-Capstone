@@ -15,7 +15,8 @@
     opacity: 0.85;
     position: relative;
     margin: 0 auto;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
     z-index: 0
 
     }

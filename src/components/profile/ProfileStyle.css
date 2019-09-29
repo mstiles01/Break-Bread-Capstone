@@ -3,6 +3,58 @@
 }
 
 .profileBack .recipe__book__container .bookListBack {
-    background: #5e011f;
-    opacity: 0.85;
+    border: 3px solid black;
+    margin: 20px 20px 20px 20px;
+    flex-flow: column wrap;
+    width: 75%;
+    opacity: 0.8;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 0;
+    background: #5E011F;
+    height: 100%;
+
+}
+
+.edit__button__container {
+    margin-left:10px;
+
+}
+
+.user__Info{
+    margin: 10px 10px 10px 10px;
+    color:white;
+}
+
+.aboutMeContent{
+    margin: 0;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    z-index: 6;
+}
+
+.aboutMeContent{
+    margin: 10px 10px 10px 10px;
+    border: 2px solid white;
+    border-spacing: 10px 10px 10px 10px
+}
+
+.profileBack{
+    background-image: url('../../../src/recpdets.jpg');
+background-size: cover;
+background-position: center center;
+position: relative;
+top: 0;
+bottom: 0;
+height: 100%;
+z-index: 0
+}
+
+.username__text{
+
 }

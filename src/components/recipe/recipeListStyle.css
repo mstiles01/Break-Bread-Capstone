@@ -18,11 +18,12 @@ flex-direction: row;
     margin: 5px 5px 5px 5px;
     /* background: #5e011f; */
     flex-flow: column wrap;
-    width: 75%;
-    height: 100%;
+    width: 80%;
+    height: 800px;
     position: relative;
     margin: 0 auto;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
     opacity: 0.85;
 }
 

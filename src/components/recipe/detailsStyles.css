@@ -1,0 +1,9 @@
+
+
+.BackgroundDetails{
+    background-image: url('../../../src/recpdets.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+}
