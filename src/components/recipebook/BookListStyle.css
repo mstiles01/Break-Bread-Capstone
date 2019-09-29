@@ -15,7 +15,8 @@
     opacity: 0.85;
     position: relative;
     margin: 0 auto;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
     z-index: 0
 
     }
@@ -24,4 +25,12 @@
     color: white;
     display: flex;
     justify-content: center;
+}
+
+.Addbutton__container{
+    margin: 10px 10px 10px 10px;
+display: flex;
+justify-content: center;
+flex-direction: row;
+
 }

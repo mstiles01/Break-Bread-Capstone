@@ -3,6 +3,7 @@ import RecipeManager from '.././modules/RecipeManager';
 import EditRecipeModal from './EditRecipeModal'
 import BookListManager from '../modules/RecipeBookManager'
 import CopyRecipeModal from '../recipe/CopyRecipeModal'
+import './detailsStyles.css'
 
 class RecipeDetail extends Component {
     state = {
@@ -77,15 +78,17 @@ class RecipeDetail extends Component {
 
 
           <div className="card">
+
             <div className="card-content">
-                <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+                <h3>Name:{this.state.name}</h3>
                 <p>Type: {this.state.type}</p>
                 <p>Ingredients: {this.state.ingredients}</p>
+
 
                 <div className="EditRecBTN">
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.recipePushBack}>Back to Recipe</button>
                 <button type="button" disabled={this.state.loadingStatus} onClick={this.bookPushBack}>Back to Recipe Books</button>
-             
+
                 { checkUser ?
                 <div>
                 <EditRecipeModal bookList={this.state.bookList} {...this.props}
@@ -96,8 +99,14 @@ class RecipeDetail extends Component {
 
 
             </div>
+
+            </div>
+            <div className="BackgroundDetails">
+            hi
             </div>
             </div>
+
+
 
 
         );

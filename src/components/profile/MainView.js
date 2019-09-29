@@ -10,6 +10,7 @@ import "./ProfileStyle.css"
 
 
 
+
 class MainView extends Component {
     state = {
         user: {
@@ -59,10 +60,13 @@ class MainView extends Component {
         return (
           <React.Fragment>
             <div className="profileBack">
-             <div><h1>User Profile</h1></div>
-             <h3>{this.state.username}</h3>
-             <p>{this.state.bio}</p>
-            <section className="button__container">
+             <div className="user__Info">
+             <h1 className="username__text">User Name: <br></br>{this.state.username}</h1>
+             <p className="aboutme">About Me:</p>
+             <p className="aboutMeContent">
+             {this.state.bio}</p>
+             </div>
+            <section className="edit__button__container">
               <EditBioModal editBio={this.editBio} {...this.props} />
             </section>
 
