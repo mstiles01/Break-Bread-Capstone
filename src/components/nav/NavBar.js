@@ -27,18 +27,20 @@ class NavBar extends Component {
 
         <ul className="nav nav-pills nav-fill">
 
+        <li className="nav-item">
+            <Link className="nav-link" to="/profile">
+              Profile
+                      </Link>
+          </li>
+
           <li className="nav-item">
             <Link className="nav-link" to="/BookList">
               Recipe Book
                       </Link>
           </li>
 
-        
-          <li className="nav-item">
-            <Link className="nav-link" to="/profile">
-              Profile
-                      </Link>
-          </li>
+
+
           <li className="nav-item">
             <Link className="nav-link" to="/recipes">
               List of Recipes
