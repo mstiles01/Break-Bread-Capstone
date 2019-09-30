@@ -115,7 +115,7 @@ class EditBioModal extends React.Component {
             {/* input fields */}
             <Input
               id="bio" // has to match json
-              type="text"
+              type="textarea"
               onChange={this.handleFieldChange}
               value={this.state.name}
             />

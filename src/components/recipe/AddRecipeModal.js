@@ -37,7 +37,7 @@ class recipeAddModal extends React.Component {
   constructNewRecipe = evt => {
     evt.preventDefault();
     if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === "" ){
-      window.alert("Please fill out the form right, idiot head.");
+      window.alert("Please Fill Out All Fields");
     } else {
 
       const recipes = {
@@ -100,7 +100,7 @@ class recipeAddModal extends React.Component {
             />
             <Input
               id="ingredients"
-              type="text"
+              type="textarea"
               onChange={this.handleFieldChange}
               placeholder="Add Ingredients"
 

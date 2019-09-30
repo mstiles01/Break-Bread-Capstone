@@ -3,6 +3,7 @@ import RecipeCard from '../recipe/RecipeCard'
 import RecipeManager from '../modules/RecipeManager'
 import AddRecipeModal from '../recipe/AddRecipeModal'
 import BookListManager from '../modules/RecipeBookManager'
+import './BookDetailStyles.css'
 
 class RecipeBookList extends Component {
     state = {
@@ -85,7 +86,8 @@ class RecipeBookList extends Component {
    render() {
     return (
       <React.Fragment>
-        <section className="button__container">
+         <div className="Book_detail">
+        <section className="bookdets__button__container">
           <AddRecipeModal addNewRecipe={this.addNewRecipe} bookList={this.state.bookList} {...this.props} />
         </section>
         <div className="cards__container">
@@ -101,6 +103,7 @@ class RecipeBookList extends Component {
             />
           ))}
         </div>
+       </div>
       </React.Fragment>
     );
   }

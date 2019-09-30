@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
 .recipe__book__container .bookListBack{
     display: hidden;
 }
@@ -15,7 +17,7 @@
     z-index: 0;
     background: #5E011F;
     height: 100%;
-
+    font-family: 'Playfair Display', serif;
 }
 
 .edit__button__container {
@@ -34,12 +36,14 @@
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        1px 1px 0 #000;
+
     z-index: 6;
 }
 
 .aboutMeContent{
     margin: 10px 10px 10px 10px;
+    
 
 }
 
@@ -62,5 +66,6 @@ margin: 20px;
 
 .about__Me__border{
     border: 2px solid white;
-    border-spacing: 10px 10px 10px 10px
+    border-spacing: 10px 10px 10px 10px;
+    /* width: 60% */
 }

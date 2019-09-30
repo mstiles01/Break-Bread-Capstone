@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 .addBookdiv{
 margin: 10px 10px 10px 10px;
 display: flex;
@@ -38,5 +39,6 @@ flex-direction: row;
     color: white;
     display: flex;
     justify-content: center;
+    font-family: 'Playfair Display', serif;
 
 }
