@@ -40,8 +40,7 @@
 
 .aboutMeContent{
     margin: 10px 10px 10px 10px;
-    border: 2px solid white;
-    border-spacing: 10px 10px 10px 10px
+
 }
 
 .profileBack{
@@ -55,6 +54,13 @@ height: 100%;
 z-index: 0
 }
 
-.username__text{
+.imgAva{
+height: 100px;
+width: 100px;
+margin: 20px;
+}
 
+.about__Me__border{
+    border: 2px solid white;
+    border-spacing: 10px 10px 10px 10px
 }
