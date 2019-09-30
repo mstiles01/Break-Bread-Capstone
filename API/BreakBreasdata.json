@@ -81,46 +81,6 @@
       "recipeBookId": 6
     },
     {
-      "name": "hi",
-      "type": "test",
-      "ingredients": "hi",
-      "recipeBookId": 4,
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "name": "1234",
-      "type": "hi",
-      "ingredients": "you",
-      "recipeBookId": 4,
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "name": "hi",
-      "type": "1",
-      "ingredients": "test",
-      "recipeBookId": 4,
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "name": "s",
-      "type": "hi",
-      "ingredients": "w",
-      "recipeBookId": 4,
-      "userId": 2,
-      "id": 8
-    },
-    {
-      "name": "Test",
-      "type": "test",
-      "ingredients": "test",
-      "recipeBookId": 9,
-      "userId": 2,
-      "id": 9
-    },
-    {
       "name": "Bluah",
       "type": "v",
       "ingredients": "33",
@@ -138,12 +98,6 @@
       "id": 3
     },
     {
-      "name": "Alpha",
-      "description": "Alpha",
-      "userId": 2,
-      "id": 4
-    },
-    {
       "name": "PrePop",
       "description": "PrePop",
       "userId": 4,
@@ -154,18 +108,6 @@
       "description": "Test",
       "userId": 4,
       "id": 7
-    },
-    {
-      "name": "Turd",
-      "description": "Turd",
-      "userId": 2,
-      "id": 8
-    },
-    {
-      "name": "Test ",
-      "description": "Hi",
-      "userId": 2,
-      "id": 9
     },
     {
       "name": "s",

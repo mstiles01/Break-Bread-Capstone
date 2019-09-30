@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import AuthenticationManager from '.././modules/AuthenticationManager';
 import EditBioModal from './EditBioModal';
-import ProfileManager from '../modules/ProfileManager'
-import BookList from '../recipebook/BookList'
-import RecipeBookManager from '../modules/RecipeBookManager'
-import AddBookModal from '../recipebook/AddBookModal';
+import ProfileManager from '../modules/ProfileManager';
+import BookList from '../recipebook/BookList';
+import RecipeBookManager from '../modules/RecipeBookManager';
 import "./ProfileStyle.css"
+import manava from "../../../src/andy.jpg"
 
 
 
@@ -61,10 +61,12 @@ class MainView extends Component {
           <React.Fragment>
             <div className="profileBack">
              <div className="user__Info">
-             <h1 className="username__text">User Name: <br></br>{this.state.username}</h1>
+             <h1 className="username__info"><img className="imgAva"src={manava}></img><br></br>{this.state.username}</h1>
              <p className="aboutme">About Me:</p>
+             <div className="about__Me__border">
              <p className="aboutMeContent">
              {this.state.bio}</p>
+             </div>
              </div>
             <section className="edit__button__container">
               <EditBioModal editBio={this.editBio} {...this.props} />
