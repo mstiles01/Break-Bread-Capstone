@@ -96,9 +96,11 @@ class CopyRecipeModal extends Component {
 
         return (
             <>
-                <Button onClick={this.toggle} color="success">
+                <div className="copyBTNBox">
+                <Button onClick={this.toggle} color="primary">
                     Copy Recipe
                 </Button>
+                </div>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Copy </ModalHeader>
                     <ModalBody>

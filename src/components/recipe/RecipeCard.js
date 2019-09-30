@@ -53,7 +53,9 @@ class RecipeCard extends Component {
                     </div>
                     : null
                 }
+                    <div className="recpdetsBTN">
                     <Link to={`/recipes/${this.props.recipes.id}`}><button>Recipe Details</button></Link>
+                    </div>
 
 
                 </div>

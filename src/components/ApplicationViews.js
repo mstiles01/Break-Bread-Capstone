@@ -19,8 +19,8 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
+
+        
         <Route exact path="/" render={props => {
           if (this.isAuthenticated()) {
             return <ProfilePage
@@ -29,21 +29,21 @@ export default class ApplicationViews extends Component {
               userId={parseInt(props.match.params.userId)}
               {...props}
             />
+          } else {
+            return <WelcomePage trigger={this.props.trigger} {...props}/>
           }
-        }
-        }
+        }}  />
 
 
-          component={WelcomePage} />
         <Route
           exact
           path="/recipes"
           render={props => {
-            if (this.isAuthenticated()) {
-              return <RecipeList activeUser={this.activeUser} {...props} />;
-              // Remove null and return the component which will show news articles
-            }
-          }}
+          if (this.isAuthenticated()) {
+            return <RecipeList activeUser={this.activeUser} {...props} />;
+            // Remove null and return the component which will show news articles
+          }
+        }}
         />
 
         <Route path="/recipes/:recipeId(\d+)" render={(props) => {

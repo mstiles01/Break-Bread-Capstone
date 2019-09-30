@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "bio": "I think every chef, not just in America, but across the world, has a double-edged sword - two jackets, one that's driven, a self-confessed perfectionist, thoroughbred, hate incompetence and switch off the stove, take off the jacket and become a family man.",
+      "bio": "I think every chef, not just in America, but across the world, has a double-edged sword - two jackets, one that's driven, a self-confessed perfectionist, thoroughbred, hate incompetence and switch off the stove, take off the jacket and become a family man.\n\nI am also the true 3 Star Michelin Chef! Plz Believe me!",
       "username": "I_am_Ramsay",
       "email": "mstiles01@icloud.com",
       "password": "1234",
@@ -13,6 +13,18 @@
       "email": "new@fresh.com",
       "password": "1234",
       "id": 3
+    },
+    {
+      "email": "tim@tom.com",
+      "username": "Tim_Tom_Boss_Sauce",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "23@4.com",
+      "username": "1",
+      "password": "1",
+      "id": 5
     }
   ],
   "recipes": [
