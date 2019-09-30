@@ -31,7 +31,7 @@ class addBookModal extends React.Component {
   constructNewBook = evt => {
     evt.preventDefault();
     if (this.state.name === "" || this.state.description === "") {
-      window.alert("Please fill out the form right, idiot head.");
+      window.alert("Please Fill Out All Fields");
     } else {
       const recipeBooks = {
         name: this.state.name,
@@ -90,7 +90,7 @@ class addBookModal extends React.Component {
             />
             <Input
             id="description"
-            type="text"
+            type="textarea"
             onChange={this.handleFieldChange}
             placeholder="Add Book Description"
           />

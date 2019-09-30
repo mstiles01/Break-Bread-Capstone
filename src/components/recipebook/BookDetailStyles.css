@@ -1,0 +1,12 @@
+.bookdets__button__container{
+    margin: 10px 10px 10px 10px
+}
+
+.Book_detail {
+    background-image: url('../../../src/darkpage.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+    z-index: 0;
+}

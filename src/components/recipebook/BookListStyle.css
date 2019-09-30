@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
 .bookListBack {
     background-image: url('../../../src/BookImg.jpg');
     background-size: cover;
@@ -8,11 +10,12 @@
 }
 
  .Bookcard__container{
-    border: 3px solid black;
+    border: 3px solid rgb(85, 29, 29);
     margin: 5px 5px 5px 5px;
     flex-flow: column wrap;
     width: 75%;
-    opacity: 0.85;
+    height: 500px;
+    opacity: 0.9;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
@@ -25,6 +28,7 @@
     color: white;
     display: flex;
     justify-content: center;
+    font-family: 'Playfair Display', serif;
 }
 
 .Addbutton__container{

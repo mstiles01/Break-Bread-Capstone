@@ -67,7 +67,7 @@ class EditRecipeModal extends React.Component {
 
     evt.preventDefault(); // stops evt?
     if (this.state.name === "" || this.state.type === "" || this.state.ingredients === "" || this.state.recipeBookId === this.state.ingredients){
-    window.alert("Please fill out the form right, idiot head.");
+    window.alert("Please Fill Out All Fields");
     }
     else {
     this.setState({ loadingStatus: true });

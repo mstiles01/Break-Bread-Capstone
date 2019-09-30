@@ -1,119 +1,107 @@
 {
   "users": [
     {
-      "email": "elidumbface@dumbdumb.com",
-      "username": "elidumbface",
-      "password": "1234",
-      "bio": "I am Michael, Hear Me Roar!",
-      "id": 1
-    },
-    {
-      "bio": "Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville. The book is sailor Ishmael's narrative of the obsessive quest of Ahab, captain of the whaling ship Pequod, for revenge on Moby Dick, the giant white sperm whale that on the ship's previous voyage bit off Ahab's leg at the knee. A contribution to the literature of the American Renaissance, the work's genre classifications range from late Romantic to early Symbolist. Moby-Dick was published to mixed reviews, was a commercial failure, and was out of print at the time of the author's death in 1891. Its reputation as a \"Great American Novel\" was established only in the 20th century, after the centennial of its author's birth. William Faulkner confessed he wished he had written the book himself,[1] and D. H. Lawrence called it \"one of the strangest and most wonderful books in the world\" and \"the greatest book of the sea ever written\".[2] Its opening sentence, \"Call me Ishmael\", is among world literature's most famous.[3]  Melville began writing Moby-Dick in February 1850, and would eventually take 18 months to write the book, a full year more than he had first anticipated. Writing was interrupted by his making the acquaintance of Nathaniel Hawthorne in August 1850, and by the creation of the \"Mosses from an Old Manse\" essay as a first result of that friendship. The book is dedicated to Hawthorne, \"in token of my admiration for his genius\".  The basis for the work is Melville's 1841 whaling voyage aboard the Acushnet. The novel also draws on whaling literature, and on literary inspirations such as Shakespeare and the Bible. The white whale is modeled on the notoriously hard-to-catch albino whale Mocha Dick, and the book's ending is based on the sinking of the whaleship Essex in 1820. The detailed and realistic descriptions of whale hunting and of extracting whale oil, as well as life aboard ship among a culturally diverse crew, are mixed with exploration of class and social status, good and evil, and the existence of God. In addition to narrative prose, Melville uses styles and literary devices ranging from songs, poetry, and catalogs to Shakespearean stage directions, soliloquies, and asides.  In October 1851, the chapter \"The Town Ho's Story\" was published in Harper's New Monthly Magazine. The same month, the whole book was first published (in three volumes) as The Whale in London, and under its definitive title in a single-volume edition in New York in November. There are hundreds of differences between the two editions, most slight but some important and illuminating. The London publisher, Richard Bentley, censored or changed sensitive passages; Melville made revisions as well, including a last-minute change to the title for the New York edition. The whale, however, appears in the text of both editions as \"Moby Dick\", without the hyphen.[4] One factor that led British reviewers to scorn the book was that it seemed to be told by a narrator who perished with the ship: the British edition lacked the Epilogue, which recounts Ishmael's survival. About 3,200 copies were sold during the author's life.",
-      "username": "andyismydad",
+      "bio": "I think every chef, not just in America, but across the world, has a double-edged sword - two jackets, one that's driven, a self-confessed perfectionist, thoroughbred, hate incompetence and switch off the stove, take off the jacket and become a family man.",
+      "username": "I_am_Ramsay",
       "email": "mstiles01@icloud.com",
       "password": "1234",
       "id": 2
     },
     {
-      "bio": "hi",
-      "username": "mstiles01",
-      "email": "ab@c",
-      "password": "12",
+      "bio": "I am a fresh person, I like fresh things, although I will say its not always a salad. In fact it's never a salad! Salad's are sad I only like meat. I guess that makes me a true carnivore! ",
+      "username": "I_am_fresh_boi",
+      "email": "new@fresh.com",
+      "password": "1234",
       "id": 3
-    },
-    {
-      "bio": "Hello!",
-      "username": "Michael ",
-      "email": "ab@c.com",
-      "password": "1234",
-      "id": 4
-    },
-    {
-      "email": "12@3.cpo",
-      "username": "hi",
-      "password": "hi",
-      "id": 5
-    },
-    {
-      "username": "mstiles01@iclpid.com",
-      "password": "1234",
-      "id": 6
-    },
-    {
-      "email": "45@6.com",
-      "username": "i",
-      "password": "i",
-      "id": 7
-    },
-    {
-      "email": "d",
-      "username": "d",
-      "password": "d",
-      "id": 8
-    },
-    {
-      "email": "f",
-      "username": "f",
-      "password": "f",
-      "id": 9
-    },
-    {
-      "email": "3",
-      "username": "3",
-      "password": "3",
-      "id": 10
-    },
-    {
-      "email": "ab@r.com",
-      "username": "1",
-      "password": "1",
-      "id": 11
     }
   ],
   "recipes": [
     {
-      "name": "v",
-      "type": "v",
-      "ingredients": "33",
-      "userId": 4,
-      "id": 4,
-      "activeUserId": 4,
-      "recipeBookId": 6
+      "name": "Grilled Steak Spicy Marinade ",
+      "type": "BBQ",
+      "ingredients": "(1)Tomahawk Ribeye, (6oz) of Texas BBQ Sauce, (5tbs.) Wisticher, (2tbs.) Red Pepper Flakes ",
+      "recipeBookId": 11,
+      "userId": 2,
+      "id": 1
     },
     {
-      "name": "Bluah",
-      "type": "v",
-      "ingredients": "33",
-      "userId": 11,
-      "id": 10,
-      "activeUserId": 11,
-      "recipeBookId": 10
+      "name": "Imperial Beer Bread ",
+      "type": "Baked Good",
+      "ingredients": "(12oz) Imperial Stout, (1 Stick) Unsalted Butter, (2Cups) All Purpose Flower, (2tbs.) Brown Sugar. ",
+      "userId": 2,
+      "id": 2,
+      "activeUserId": 2,
+      "recipeBookId": 13
+    },
+    {
+      "name": "Squash and Galliano Salad",
+      "type": "Salad",
+      "ingredients": "(1)white cabbage, (3)cress  (2) cucumber  (1 Lrg.)squash (1) galliano",
+      "recipeBookId": 12,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "name": "Beef Stew",
+      "type": "Stew",
+      "ingredients": "(2L) Beef Broth, (12oz) Cubed Steak, (14oz) Raw Human Emotion",
+      "recipeBookId": 15,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "name": "Plain Steak",
+      "type": "BBQ",
+      "ingredients": "(1) 18oz Ribeye, (To Taste) Salt",
+      "recipeBookId": 14,
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "name": "A Real good Salad",
+      "type": "Salad",
+      "ingredients": "(1) Head of Kale, (1) Garbage Can",
+      "recipeBookId": 14,
+      "userId": 3,
+      "id": 6
     }
   ],
   "recipeBooks": [
     {
-      "name": "Andy",
-      "description": "Andy",
-      "userId": 4,
-      "id": 3
+      "name": "Michael's Good Time Summer Recipe Book",
+      "description": "For the good times",
+      "userId": 2,
+      "id": 11
     },
     {
-      "name": "PrePop",
-      "description": "PrePop",
-      "userId": 4,
-      "id": 6
+      "name": "Michael's Sad Time Recipe Book",
+      "description": "For the sad hours.",
+      "userId": 2,
+      "id": 12
     },
     {
-      "name": "1234",
-      "description": "Test",
-      "userId": 4,
-      "id": 7
+      "name": "This one is for the boys.",
+      "description": "It must be Saturday!",
+      "userId": 2,
+      "id": 13
     },
     {
-      "name": "s",
-      "description": "s",
-      "userId": 11,
-      "id": 10
+      "name": "Meat is the only way!",
+      "description": "Go Meat!",
+      "userId": 3,
+      "id": 14
+    },
+    {
+      "name": "I smell like Beef!",
+      "description": "Vine Inspired Recipes",
+      "userId": 3,
+      "id": 15
+    },
+    {
+      "name": "This is a Test Book",
+      "description": "For the Homies!",
+      "userId": 2,
+      "id": 16
     }
   ]
 }
