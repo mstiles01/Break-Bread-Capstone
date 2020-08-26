@@ -65,7 +65,7 @@ class Register extends React.Component {
         }
         UserDataManager.postUser(newUserObject)
             .then(newRegisteredUser => sessionStorage.setItem("credentials", newRegisteredUser.id))
-            .then(() => this.props.history.push("/profile"))
+             .then(() => this.props.history.push("/profile"))
         }
     }
 

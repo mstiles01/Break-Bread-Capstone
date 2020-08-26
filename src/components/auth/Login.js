@@ -30,6 +30,7 @@ class Login extends Component {
             checkedUsers => {
                 if (checkedUsers.length > 0) {
                     sessionStorage.setItem("credentials", checkedUsers[0].id);
+                    this.props.trigger()
                     this.props.history.push("/profile");
                 } else {
                     alert("Invalid email or password");

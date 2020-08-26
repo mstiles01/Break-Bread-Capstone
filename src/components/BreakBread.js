@@ -7,12 +7,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class BreakBread extends Component {
+  state = {
+    toggle: true
+  }
+
+triggerRender = () => {
+this.setState({
+  toggle: !this.state.toggle
+})
+}
   render() {
     return (
       <React.Fragment>
         <Router>
-        <NavBar />
-        <ApplicationViews />
+        <NavBar trigger={this.triggerRender} />
+        <ApplicationViews trigger={this.triggerRender} />
         </Router>
       </React.Fragment>
     );

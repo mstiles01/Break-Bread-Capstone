@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "bio": "I think every chef, not just in America, but across the world, has a double-edged sword - two jackets, one that's driven, a self-confessed perfectionist, thoroughbred, hate incompetence and switch off the stove, take off the jacket and become a family man.",
+      "bio": "No More Bugs",
       "username": "I_am_Ramsay",
       "email": "mstiles01@icloud.com",
       "password": "1234",
@@ -13,17 +13,40 @@
       "email": "new@fresh.com",
       "password": "1234",
       "id": 3
+    },
+    {
+      "bio": "I like the sauce!",
+      "username": "Tim_Tom_Boss_Sauce",
+      "email": "tim@tom.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "23@4.com",
+      "username": "1",
+      "password": "1",
+      "id": 5
+    },
+    {
+      "email": "3000",
+      "username": "30000",
+      "password": "1",
+      "id": 6
+    },
+    {
+      "email": "sss@q",
+      "username": "qq",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "email": "t5t",
+      "username": "tt",
+      "password": "4r",
+      "id": 8
     }
   ],
   "recipes": [
-    {
-      "name": "Grilled Steak Spicy Marinade ",
-      "type": "BBQ",
-      "ingredients": "(1)Tomahawk Ribeye, (6oz) of Texas BBQ Sauce, (5tbs.) Wisticher, (2tbs.) Red Pepper Flakes ",
-      "recipeBookId": 11,
-      "userId": 2,
-      "id": 1
-    },
     {
       "name": "Imperial Beer Bread ",
       "type": "Baked Good",
@@ -32,14 +55,6 @@
       "id": 2,
       "activeUserId": 2,
       "recipeBookId": 13
-    },
-    {
-      "name": "Squash and Galliano Salad",
-      "type": "Salad",
-      "ingredients": "(1)white cabbage, (3)cress  (2) cucumber  (1 Lrg.)squash (1) galliano",
-      "recipeBookId": 12,
-      "userId": 2,
-      "id": 3
     },
     {
       "name": "Beef Stew",
@@ -64,15 +79,67 @@
       "recipeBookId": 14,
       "userId": 3,
       "id": 6
+    },
+    {
+      "name": "A Salad Thats Just Okay.",
+      "type": "Salad",
+      "ingredients": "(1) Head of Lettuce (1) Tomato ",
+      "recipeBookId": 16,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "Andy's Favorite Breakfast",
+      "type": "Breakfast",
+      "ingredients": "(5 Strips) Bacon, (3) Eggs",
+      "userId": 3,
+      "id": 8,
+      "activeUserId": 3,
+      "recipeBookId": 14
+    },
+    {
+      "name": "THis is to make you happy",
+      "type": "Happy Time Food ",
+      "ingredients": "Cake",
+      "recipeBookId": 12,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "name": "Andys Favorite Breakfast",
+      "type": "Breakfast",
+      "ingredients": "(5 Strips) Bacon, (3) Eggs, Cheese ",
+      "userId": 4,
+      "id": 10,
+      "activeUserId": 4,
+      "recipeBookId": 18
+    },
+    {
+      "name": "A Salad Thats Just Okay.",
+      "userId": 3,
+      "type": "Salad",
+      "ingredients": "(1) Head of Lettuce (1) Tomato ",
+      "recipeBookId": "14",
+      "id": 11
+    },
+    {
+      "name": "gayanal",
+      "type": "American",
+      "ingredients": "Butthole",
+      "recipeBookId": 17,
+      "userId": 2,
+      "id": 12
+    },
+    {
+      "name": "gayanal",
+      "userId": 3,
+      "type": "American",
+      "ingredients": "Butthole",
+      "recipeBookId": "15",
+      "id": 13
     }
   ],
   "recipeBooks": [
-    {
-      "name": "Michael's Good Time Summer Recipe Book",
-      "description": "For the good times",
-      "userId": 2,
-      "id": 11
-    },
     {
       "name": "Michael's Sad Time Recipe Book",
       "description": "For the sad hours.",
@@ -102,6 +169,18 @@
       "description": "For the Homies!",
       "userId": 2,
       "id": 16
+    },
+    {
+      "name": "Boo Boo Veggie",
+      "description": "Yes!",
+      "userId": 2,
+      "id": 17
+    },
+    {
+      "name": "Hey Look A Book!",
+      "description": "A book is here!",
+      "userId": 4,
+      "id": 18
     }
   ]
 }
